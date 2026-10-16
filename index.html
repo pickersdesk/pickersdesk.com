@@ -83,6 +83,7 @@ p{margin:0 0 14px;max-width:62ch}
 
 /* The Turnover */
 .report{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:start}
+.hook-sub{font-size:19px;font-weight:600;color:var(--ink);margin-bottom:12px}
 .who{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
 .who li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start}
 .who li::before{content:"";width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--brass)}
@@ -210,14 +211,15 @@ footer p{margin:0;max-width:70ch}
   <section class="band" id="turnover">
     <div class="wrap report">
       <div>
-        <p class="kicker">First report · The Turnover</p>
-        <h2>Bay Area restaurants and bars opening, closing and changing hands.</h2>
-        <p>Pulled straight from California liquor-license filings across all nine Bay Area counties. A new filing usually shows up one to three months before a place opens, while the owner is still choosing equipment, suppliers and service companies.</p>
+        <p class="kicker">Now publishing · The Turnover</p>
+        <h2>Be the first call, not the fifth.</h2>
+        <p class="hook-sub">Bay Area restaurants and bars opening, closing and changing hands, from California liquor-license filings across all nine counties.</p>
+        <p>New restaurants pick their equipment, suppliers and service companies weeks before they open. A new filing usually shows up one to three months ahead, while those decisions are still open. The Turnover tells you who they are.</p>
         <ul class="who">
-          <li><span><b>Equipment dealers</b> reach new restaurants before they buy.</span></li>
-          <li><span><b>Liquidators and used-equipment buyers</b> hear about closings first.</span></li>
-          <li><span><b>Service companies</b> (refrigeration, hoods, install) meet new owners early.</span></li>
-          <li><span><b>Distributors</b> pitch while the supplier list is still open.</span></li>
+          <li><span><b>Equipment dealers:</b> they buy the kitchen before they open the doors.</span></li>
+          <li><span><b>Liquidators and used equipment:</b> hear about closed kitchens before the auction listing goes up.</span></li>
+          <li><span><b>Service companies</b> (refrigeration, hoods, install): new owners often bring in new vendors. Be the one they meet first.</span></li>
+          <li><span><b>Distributors:</b> win the account before the first delivery.</span></li>
         </ul>
         <a class="btn" href="#signup" data-subscribe>Send me The Turnover</a>
       </div>
@@ -228,7 +230,7 @@ footer p{margin:0;max-width:70ch}
           <li class="row"><span class="tag t-open">Opening soon</span><b>North Beach Pizza · Berkeley</b><span class="meta">New license application · beer &amp; wine, restaurant</span></li>
           <li class="row"><span class="tag t-open">Opening soon</span><b>Mohi Pasta · Morgan Hill</b><span class="meta">New license application · beer &amp; wine, restaurant</span></li>
           <li class="row"><span class="tag t-hands">Changing hands</span><b>Peking Restaurant · San Francisco</b><span class="meta">License transfer to a new owner · pending</span></li>
-          <li class="row"><span class="tag t-close">Closing</span><b>Full-service restaurant · San Francisco</b><span class="meta">License surrendered · names in the full report</span></li>
+          <li class="row"><span class="tag t-close">Closed or paused</span><b>Full-service restaurant · San Francisco</b><span class="meta">License surrendered · names in the full report</span></li>
         </ul>
         <figcaption class="filing-foot">Real entries from the state's Oct 14 filings. Each week's issue lists every Bay Area filing with owner, address and license type.</figcaption>
       </figure>
