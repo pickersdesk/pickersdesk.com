@@ -139,7 +139,9 @@ footer p{margin:0;max-width:70ch}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{.top .btn,.cta,.signup{display:none}body{background:#fff}}
 </style>
-<style>.done{padding-block:clamp(48px,10vw,120px)}.done h1{max-width:16ch}.notes{max-width:68ch;display:grid;gap:18px;margin-top:28px}.notes h2{font-size:22px;margin:10px 0 0}.notes p{margin:0}.done .lede{max-width:40ch}</style>
+<link rel="canonical" href="https://pickersdesk.com/data.html">
+<style>.done{padding-block:clamp(48px,10vw,120px)}.done h1{max-width:18ch}.notes{max-width:68ch;display:grid;gap:16px;margin-top:28px}.notes h2{font-size:22px;margin:14px 0 0}.notes p,.notes ul{margin:0}.notes ul{padding-left:20px;display:grid;gap:6px}.done .lede{max-width:44ch}.updated{font-size:14px;color:var(--muted);margin-top:10px}.sig{margin-top:8px;font-weight:600;color:var(--ink)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 0}footer nav a:hover{text-decoration:underline}footer .fine{flex-basis:100%;font-size:13px}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -148,27 +150,32 @@ footer p{margin:0;max-width:70ch}
     <span>Picker's Desk</span>
   </a>
 </div></header>
-<main class="wrap done">
+<main id="main" class="wrap done">
   <p class="eyebrow">About our data</p>
   <h1>What the records say, and what they don't.</h1>
   <div class="notes">
-    <p>Picker's Desk reports are compiled from public records published by government agencies. The Turnover is built from licensing reports published by the California Department of Alcoholic Beverage Control (ABC). Picker's Desk is independent and is not affiliated with, endorsed by, or acting for the State of California or any agency.</p>
+    <p>Picker's Desk reports are compiled from public records published by government agencies. The Turnover is built from licensing reports published by the California Department of Alcoholic Beverage Control (ABC) and from city business registrations, such as San Francisco's. Permit Watch is built from building-permit records published by cities, starting with San Francisco and San José. Picker's Desk is independent and is not affiliated with, endorsed by, or acting for any government or agency.</p>
     <h2>We report the filing, not the future</h2>
     <p>Each entry reflects what a public filing showed on the date it was published. A license application does not guarantee that a business will open, and an application can be withdrawn or denied. A surrendered or canceled license does not always mean a business has closed: surrenders can be temporary, and licenses are often transferred to a new owner or location. We describe each entry using the filing's own status, and label surrenders as "closed or paused."</p>
     <h2>How we sort filings</h2>
     <p><b>Duplicates.</b> One business often files several licenses at the same address (for example a restaurant license and a catering permit). We count it once, as one business, and list its license types together.</p>
     <p><b>Transfers.</b> When a license moves to a new owner at the same address, we report it as "changing hands," not as a closing plus an opening. When the paperwork shows the prior business, we name it.</p>
     <p><b>Withdrawn or denied applications.</b> We track every filing from day to day. If an application we reported as "opening soon" is later withdrawn, denied or disappears from the state's list, we note it in a later issue rather than leaving the earlier entry unexplained.</p>
+    <p><b>Permits.</b> Dollar figures are the applicant's estimate on the permit, not a contract price. When a permit says electrical, mechanical or plumbing work will be permitted separately, we flag it, but that doesn't mean the work hasn't been awarded. Contractor names appear only where the city lists them.</p>
     <p><b>Closings.</b> A surrendered license is labeled "closed or paused," because surrenders can be temporary. Wineries, liquor stores and other retail licenses are kept out of the restaurant counts.</p>
     <h2>We don't verify what was filed</h2>
     <p>We copy and organize information as the agency published it. We don't independently confirm names, addresses, owners, dates or statuses, and agency records can contain errors or be updated later. Always confirm details with the business or the agency before acting on them.</p>
     <h2>Information only</h2>
     <p>Reports are provided as-is for general business information. They are not legal, financial or investment advice, and Picker's Desk is not responsible for decisions made based on them.</p>
     <h2>Corrections</h2>
-    <p>If an entry is wrong or out of date, email <b>roger@pickersdesk.com</b> with the business name and license number. We review every request and correct or remove errors promptly.</p>
+    <p>If an entry is wrong or out of date, email <b>roger@pickersdesk.com</b> with the business name and the license or permit number. We review every request and correct or remove errors promptly.</p>
   </div>
-  <div class="cta"><a class="btn ghost" href="/">Back to Picker's Desk</a></div>
+  <div class="cta"><a class="btn" href="/#signup">Get The Turnover free</a> <a class="btn ghost" href="/">Back to Picker's Desk</a></div>
 </main>
-<footer><div class="wrap"><p><b>Picker's Desk</b> · roger@pickersdesk.com · 3000-F Danville Blvd #142, Alamo, CA 94507</p><p>© 2026 Picker's Desk.</p></div></footer>
+<footer><div class="wrap">
+  <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a> · 3000-F Danville Blvd #142, Alamo, CA 94507</p>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav>
+  <p class="fine">© 2026 Picker's Desk, a trade name of Global Qwest, Inc.</p>
+</div></footer>
 </body>
 </html>
