@@ -58,6 +58,7 @@ a:hover{color:var(--ink-2)}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .logo svg{width:40px;height:40px;flex:none}
 .logo span{font-weight:800;font-size:19px;letter-spacing:.14em;text-transform:uppercase;line-height:1}
+button,input,select,textarea{font-family:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--ink);-webkit-tap-highlight-color:transparent;transition:background-color .15s ease,color .15s ease}
 .btn:hover{background:var(--ink-2);border-color:var(--ink-2);color:var(--paper)}
 .btn.ghost{background:transparent;color:var(--ink)}
@@ -122,11 +123,22 @@ p{margin:0 0 14px;max-width:62ch}
 .signup .btn{background:var(--brass);border-color:var(--brass);color:#1A1A14}
 .signup .btn:hover{background:#D9A748;border-color:#D9A748;color:#1A1A14}
 
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sub{display:grid;gap:10px;min-width:0;width:100%;max-width:380px}
+.sub input{font:inherit;font-size:16px;width:100%;min-height:48px;padding:12px 16px;border-radius:12px;border:1px solid #3E5F55;background:#F4EFE4;color:#1A1A14;-webkit-appearance:none;appearance:none}
+.sub input::placeholder{color:#6B716C}
+.sub input:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.sub .btn{width:100%}
+.sub .btn[disabled]{opacity:.7;cursor:progress}
+.sub-msg{margin:0;min-height:1.4em;font-size:15px;color:#E4DCCB}
+.sub-msg.ok{color:#F4EFE4;font-weight:600}
+.sub-msg.err{color:#F2C4B8}
 footer{padding-block:36px max(36px, env(safe-area-inset-bottom, 0px));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
 footer p{margin:0;max-width:70ch}
 
 @media (max-width:820px){
+  .sub{max-width:none}
   .report{grid-template-columns:minmax(0,1fr)}
   .steps,.facts{grid-template-columns:minmax(0,1fr)}
   .signup .box{grid-template-columns:minmax(0,1fr)}
@@ -151,7 +163,7 @@ footer p{margin:0;max-width:70ch}
       <svg viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="400" fill="#C9932E"/><line x1="310" y1="330" x2="310" y2="640" stroke="#1E3A32" stroke-width="64" stroke-linecap="round"/><circle cx="430" cy="330" r="120" fill="none" stroke="#1E3A32" stroke-width="56"/><circle cx="430" cy="330" r="62" fill="#F4EFE4" opacity="0.55"/><circle cx="398" cy="300" r="16" fill="#F4EFE4"/></svg>
       <span>Picker's Desk</span>
     </a>
-    <a class="btn small" href="mailto:roger@pickersdesk.com?subject=Send%20me%20The%20Turnover" data-subscribe>Get The Turnover</a>
+    <a class="btn small" href="#signup" data-subscribe>Get The Turnover</a>
   </div>
 </header>
 
@@ -161,7 +173,7 @@ footer p{margin:0;max-width:70ch}
     <h1>Public records, <em>picked clean.</em></h1>
     <p class="lede">The state publishes who's opening, closing and changing hands. It just buries it in raw filings. We sort it, translate it into plain English, and send you the short list every week.</p>
     <div class="cta">
-      <a class="btn" href="mailto:roger@pickersdesk.com?subject=Send%20me%20The%20Turnover" data-subscribe>Get The Turnover free</a>
+      <a class="btn" href="#signup" data-subscribe>Get The Turnover free</a>
       <a class="btn ghost" href="#turnover">See what's in it</a>
       <small>Free weekly email. Unsubscribe anytime.</small>
     </div>
@@ -179,7 +191,7 @@ footer p{margin:0;max-width:70ch}
           <li><span><b>Service companies</b> (refrigeration, hoods, install) meet new owners early.</span></li>
           <li><span><b>Distributors</b> pitch while the supplier list is still open.</span></li>
         </ul>
-        <a class="btn" href="mailto:roger@pickersdesk.com?subject=Send%20me%20The%20Turnover" data-subscribe>Send me The Turnover</a>
+        <a class="btn" href="#signup" data-subscribe>Send me The Turnover</a>
       </div>
 
       <figure class="filing" aria-label="Example entries from The Turnover">
@@ -217,9 +229,16 @@ footer p{margin:0;max-width:70ch}
       <div class="box">
         <div>
           <h2>Get next week's Turnover.</h2>
-          <p>Free while we're getting started. Email us and you're on the list, or reply to any issue to ask for a county or city we don't cover yet.</p>
+          <p>Free while we're getting started. One email a week, unsubscribe anytime. Reply to any issue to ask for a county or city we don't cover yet.</p>
         </div>
-        <a class="btn" href="mailto:roger@pickersdesk.com?subject=Send%20me%20The%20Turnover" data-subscribe>Email me The Turnover</a>
+        <form class="sub" action="https://app.kit.com/forms/10052947/subscriptions" method="post" id="subform" novalidate>
+          <label class="sr" for="sub-name">First name (optional)</label>
+          <input id="sub-name" name="fields[first_name]" type="text" autocomplete="given-name" placeholder="First name (optional)" maxlength="80">
+          <label class="sr" for="sub-email">Work email</label>
+          <input id="sub-email" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="Work email" required>
+          <button class="btn" type="submit" id="sub-btn">Send me The Turnover</button>
+          <p class="sub-msg" id="sub-msg" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -231,5 +250,22 @@ footer p{margin:0;max-width:70ch}
     <p>Data from public records of the California Department of Alcoholic Beverage Control. Picker's Desk is independent and not affiliated with the State of California. © 2026 Picker's Desk.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var f=document.getElementById('subform'); if(!f||!window.fetch||!window.FormData) return;
+  var b=document.getElementById('sub-btn'), m=document.getElementById('sub-msg'), e=document.getElementById('sub-email');
+  f.addEventListener('submit',function(ev){
+    if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){ev.preventDefault();m.className='sub-msg err';m.textContent='Please enter a valid email address.';e.focus();return;}
+    ev.preventDefault(); b.disabled=true; b.textContent='Sending\u2026'; m.className='sub-msg'; m.textContent='';
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){
+        if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent="Almost done. Check your inbox for a one-click confirmation email from Roger at Picker's Desk.";b.textContent='Check your inbox';}
+        else{throw new Error('bad');}
+      })
+      .catch(function(){ f.submit(); });
+  });
+})();
+</script>
 </body>
 </html>
