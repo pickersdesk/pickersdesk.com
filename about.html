@@ -148,6 +148,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .nav a:hover{text-decoration:underline}
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
+<style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:14px}}</style>
 </head>
 <body>
 <header class="top">
@@ -159,6 +160,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
     <nav class="nav" aria-label="Main">
       <a href="/#sample">Sample</a>
       <a href="/permits.html">Permit Watch</a>
+      <a href="/auctions.html">Auctions</a>
       <a href="/#plans">Pricing</a>
       <a href="/about.html">About</a>
     </nav>
