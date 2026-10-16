@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Picker's Desk — Public records, picked clean</title>
-<meta name="description" content="Picker's Desk turns messy public records into short weekly reports. First up: The Turnover, Bay Area restaurants and bars opening, closing and changing hands, from California liquor-license filings.">
+<meta name="description" content="Picker's Desk turns messy public records into short, plain-English weekly reports for businesses that profit from knowing first. Reports cover licenses, permits, property and auctions, starting with The Turnover for Bay Area restaurants and bars.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#1E3A32">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Picker's Desk">
 <meta property="og:title" content="Picker's Desk — Public records, picked clean">
-<meta property="og:description" content="Short weekly reports for businesses that profit from knowing first. First up: The Turnover, Bay Area restaurant openings, closings and owner changes.">
+<meta property="og:description" content="Public records turned into short weekly reports for businesses that profit from knowing first. Now publishing The Turnover; more reports in development.">
 <meta property="og:url" content="https://pickersdesk.com/">
 <meta property="og:image" content="https://pickersdesk.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/work-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Picker's Desk","url":"https://pickersdesk.com/","logo":"https://pickersdesk.com/icon-512.png","email":"roger@pickersdesk.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Picker's Desk","url":"https://pickersdesk.com/","description":"Picker's Desk collects public records such as license filings, permits, property records and government auctions, cleans them up, and publishes short weekly reports for the businesses that profit from knowing first.","areaServed":"San Francisco Bay Area, California","logo":"https://pickersdesk.com/icon-512.png","email":"roger@pickersdesk.com"}</script>
 <style>
 @font-face{font-family:"Work Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/work-sans-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Work Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/work-sans-latin-600-normal.woff2) format("woff2")}
@@ -102,6 +102,17 @@ p{margin:0 0 14px;max-width:62ch}
 .row .meta{font-family:var(--mono);font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .filing-foot{padding:12px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);background:var(--paper-2)}
 
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.card{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--text);text-decoration:none;min-width:0}
+.card h3{margin:0;font-size:19px;color:var(--ink);font-weight:600}
+.card p{margin:0;font-size:15px}
+.card.live{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.card.live:hover{background:var(--paper-2)}
+.card .more{margin-top:auto;font-weight:600;color:var(--ink);font-size:15px}
+.state{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:5px;color:var(--muted);background:var(--paper-2)}
+.state.on{color:var(--open);background:var(--open-bg)}
+.ask{margin-top:22px;color:var(--muted);font-size:16px}
+
 /* How it works: a real sequence, so it is numbered */
 .steps{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
 .steps li{counter-increment:s;padding-top:18px;border-top:3px solid var(--ink)}
@@ -141,6 +152,7 @@ footer p{margin:0;max-width:70ch}
   .sub{max-width:none}
   .report{grid-template-columns:minmax(0,1fr)}
   .steps,.facts{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .signup .box{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:420px){
@@ -149,6 +161,7 @@ footer p{margin:0;max-width:70ch}
   .top .btn{display:none}
   .row{grid-template-columns:minmax(0,1fr)}
   .tag{grid-row:auto;justify-self:start}
+  .cards{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{.top .btn,.cta,.signup{display:none}body{background:#fff}}
@@ -169,15 +182,30 @@ footer p{margin:0;max-width:70ch}
 
 <main id="main">
   <div class="wrap hero">
-    <p class="eyebrow">Weekly reports from public records</p>
+    <p class="eyebrow">Data reports from public records</p>
     <h1>Public records, <em>picked clean.</em></h1>
-    <p class="lede">The state publishes who's opening, closing and changing hands. It just buries it in raw filings. We sort it, translate it into plain English, and send you the short list every week.</p>
+    <p class="lede">Governments publish a steady stream of useful facts: new licenses, permits, property sales, surplus auctions. It's buried in raw filings. We collect it, clean it up, and send the businesses who profit from knowing first a short, plain-English report every week.</p>
     <div class="cta">
       <a class="btn" href="#signup" data-subscribe>Get The Turnover free</a>
-      <a class="btn ghost" href="#turnover">See what's in it</a>
+      <a class="btn ghost" href="#reports">See the reports</a>
       <small>Free weekly email. Unsubscribe anytime.</small>
     </div>
   </div>
+
+  <section id="reports">
+    <div class="wrap">
+      <p class="kicker">Reports</p>
+      <h2>One desk, many records.</h2>
+      <p>Each report follows one kind of public record and goes to the businesses that can act on it. Same method every time: straight from the source, sorted, in plain English.</p>
+      <div class="cards">
+        <a class="card live" href="#turnover"><span class="state on">Now publishing</span><h3>The Turnover</h3><p>Bay Area restaurants and bars opening, closing and changing hands, from California liquor-license filings.</p><span class="more">See a sample →</span></a>
+        <div class="card"><span class="state">In development</span><h3>Property tax sales</h3><p>Tax-defaulted properties headed to county auction, with dates, minimum bids and parcel details.</p></div>
+        <div class="card"><span class="state">In development</span><h3>Permit watch</h3><p>New remodel, addition and commercial build-out permits, for the trades and suppliers who bid on them.</p></div>
+        <div class="card"><span class="state">In development</span><h3>Surplus finds</h3><p>Government surplus and liquidation auctions across Northern California, sorted by what's actually worth bidding on.</p></div>
+      </div>
+      <p class="ask">Want a public record tracked for your business? <a href="mailto:roger@pickersdesk.com?subject=Report%20request">Tell us what you'd use</a>.</p>
+    </div>
+  </section>
 
   <section class="band" id="turnover">
     <div class="wrap report">
@@ -209,7 +237,7 @@ footer p{margin:0;max-width:70ch}
 
   <section>
     <div class="wrap">
-      <p class="kicker">How it works</p>
+      <p class="kicker">How it works · The Turnover</p>
       <h2>From raw filing to your inbox.</h2>
       <ol class="steps">
         <li><h3>The state files it</h3><p>Every business day, California posts new liquor-license applications, transfers, issued licenses and surrenders.</p></li>
@@ -247,7 +275,7 @@ footer p{margin:0;max-width:70ch}
 <footer>
   <div class="wrap">
     <p><b>Picker's Desk</b> · <a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
-    <p>Data from public records of the California Department of Alcoholic Beverage Control. Picker's Desk is independent and not affiliated with the State of California. © 2026 Picker's Desk.</p>
+    <p>All reports are built from public records; The Turnover uses filings from the California Department of Alcoholic Beverage Control. Picker's Desk is independent and not affiliated with the State of California. © 2026 Picker's Desk.</p>
   </div>
 </footer>
 <script>
