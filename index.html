@@ -145,6 +145,15 @@ p{margin:0 0 14px;max-width:62ch}
 .sub-msg{margin:0;min-height:1.4em;font-size:15px;color:#E4DCCB}
 .sub-msg.ok{color:#F4EFE4;font-weight:600}
 .sub-msg.err{color:#F2C4B8}
+#request{padding-block:clamp(40px,6vw,72px)}
+.reqbox{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:start;padding:clamp(24px,4vw,44px);background:var(--card);border:1px solid var(--line);border-radius:18px}
+.mini{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:15.5px;display:grid;gap:4px}
+.sub.req{max-width:none}
+.sub.req label{font-size:14px;font-weight:600;color:var(--ink);margin-top:4px}
+.sub.req input{background:var(--paper);border-color:var(--line);color:var(--text)}
+.sub.req .sub-msg{color:var(--muted)}
+.sub.req .sub-msg.ok{color:var(--open)}
+.sub.req .sub-msg.err{color:var(--close)}
 footer{padding-block:36px max(36px, env(safe-area-inset-bottom, 0px));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
 footer p{margin:0;max-width:70ch}
@@ -155,6 +164,7 @@ footer p{margin:0;max-width:70ch}
   .steps,.facts{grid-template-columns:minmax(0,1fr)}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .signup .box{grid-template-columns:minmax(0,1fr)}
+  .reqbox{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:420px){
   body{font-size:16px}
@@ -189,7 +199,7 @@ footer p{margin:0;max-width:70ch}
     <div class="cta">
       <a class="btn" href="#signup" data-subscribe>Get The Turnover free</a>
       <a class="btn ghost" href="#reports">See the reports</a>
-      <small>Free weekly email. Unsubscribe anytime.</small>
+      <small>Free weekly email. Unsubscribe anytime. Outside the Bay Area? <a href="#request">Request your area</a>.</small>
     </div>
   </div>
 
@@ -204,7 +214,7 @@ footer p{margin:0;max-width:70ch}
         <div class="card"><span class="state">In development</span><h3>Permit watch</h3><p>New remodel, addition and commercial build-out permits, for the trades and suppliers who bid on them.</p></div>
         <div class="card"><span class="state">In development</span><h3>Surplus finds</h3><p>Government surplus and liquidation auctions across Northern California, sorted by what's actually worth bidding on.</p></div>
       </div>
-      <p class="ask">Want a public record tracked for your business? <a href="mailto:roger@pickersdesk.com?subject=Report%20request">Tell us what you'd use</a>.</p>
+      <p class="ask">Want a public record tracked for your business, or a report for your area? <a href="#request">Request it here</a>.</p>
     </div>
   </section>
 
@@ -254,6 +264,33 @@ footer p{margin:0;max-width:70ch}
     </div>
   </section>
 
+  <section id="request">
+    <div class="wrap">
+      <div class="reqbox">
+        <div>
+          <p class="kicker">Request your area</p>
+          <h2>Not in the Bay Area? Ask for your area.</h2>
+          <p>We build reports where businesses ask for them. Tell us where you sell and what you sell. When enough businesses request the same region, we add it as a standard report, and everyone who asked hears first.</p>
+          <ul class="mini">
+            <li>Any city, county or state in the US</li>
+            <li>Restaurants and bars, or another kind of public record you'd want tracked</li>
+            <li>One confirmation email, then we only write when your area is ready or we have a question</li>
+          </ul>
+        </div>
+        <form class="sub req" action="https://app.kit.com/forms/10053154/subscriptions" method="post" id="reqform" data-ok="Request received. Check your inbox for a one-click confirmation email from Roger at Picker's Desk." novalidate>
+          <label for="req-area">Area you sell into</label>
+          <input id="req-area" name="fields[requested_area]" type="text" placeholder="e.g. Sacramento County, CA" maxlength="120" required>
+          <label for="req-biz">What you sell</label>
+          <input id="req-biz" name="fields[business_type]" type="text" placeholder="e.g. restaurant equipment, POS, linen" maxlength="120">
+          <label for="req-email">Work email</label>
+          <input id="req-email" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" required>
+          <button class="btn" type="submit">Request my area</button>
+          <p class="sub-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="signup" id="signup">
     <div class="wrap">
       <div class="box">
@@ -261,7 +298,7 @@ footer p{margin:0;max-width:70ch}
           <h2>Get next week's Turnover.</h2>
           <p>Free while we're getting started. One email a week, unsubscribe anytime. Reply to any issue to ask for a county or city we don't cover yet.</p>
         </div>
-        <form class="sub" action="https://app.kit.com/forms/10052947/subscriptions" method="post" id="subform" novalidate>
+        <form class="sub" action="https://app.kit.com/forms/10052947/subscriptions" method="post" id="subform" data-ok="Almost done. Check your inbox for a one-click confirmation email from Roger at Picker's Desk." novalidate>
           <label class="sr" for="sub-name">First name (optional)</label>
           <input id="sub-name" name="fields[first_name]" type="text" autocomplete="given-name" placeholder="First name (optional)" maxlength="80">
           <label class="sr" for="sub-email">Work email</label>
@@ -282,18 +319,24 @@ footer p{margin:0;max-width:70ch}
 </footer>
 <script>
 (function(){
-  var f=document.getElementById('subform'); if(!f||!window.fetch||!window.FormData) return;
-  var b=document.getElementById('sub-btn'), m=document.getElementById('sub-msg'), e=document.getElementById('sub-email');
-  f.addEventListener('submit',function(ev){
-    if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){ev.preventDefault();m.className='sub-msg err';m.textContent='Please enter a valid email address.';e.focus();return;}
-    ev.preventDefault(); b.disabled=true; b.textContent='Sending\u2026'; m.className='sub-msg'; m.textContent='';
-    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
-      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
-      .then(function(x){
-        if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent="Almost done. Check your inbox for a one-click confirmation email from Roger at Picker's Desk.";b.textContent='Check your inbox';}
-        else{throw new Error('bad');}
-      })
-      .catch(function(){ f.submit(); });
+  if(!window.fetch||!window.FormData) return;
+  var re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  [].forEach.call(document.querySelectorAll('form.sub'),function(f){
+    var b=f.querySelector('button'), m=f.querySelector('.sub-msg'), e=f.querySelector('input[type=email]'), label=b.textContent;
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var miss=[].filter.call(f.querySelectorAll('input[required]'),function(i){return !i.value.trim();})[0];
+      if(miss){m.className='sub-msg err';m.textContent='Please fill in '+(f.querySelector('label[for="'+miss.id+'"]')||{textContent:'this field'}).textContent.toLowerCase()+'.';miss.focus();return;}
+      if(!re.test(e.value)){m.className='sub-msg err';m.textContent='Please enter a valid email address.';e.focus();return;}
+      b.disabled=true; b.textContent='Sending\u2026'; m.className='sub-msg'; m.textContent='';
+      fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+        .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+        .then(function(x){
+          if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');b.textContent='Check your inbox';}
+          else{throw new Error('bad');}
+        })
+        .catch(function(){ b.disabled=false; b.textContent=label; f.submit(); });
+    });
   });
 })();
 </script>
