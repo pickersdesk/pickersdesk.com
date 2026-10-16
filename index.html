@@ -227,8 +227,8 @@ table.plans{width:100%;min-width:720px;border-collapse:collapse;font-size:15.5px
 .lead-back{top:0;right:0;transform:rotate(3.5deg);opacity:.92}
 .lead-front{top:64px;left:0;transform:rotate(-1.5deg);background:var(--ink);color:#EDE6D6;border-color:var(--ink)}
 .lead-top{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8;margin-bottom:12px}
-.lead h3{margin:10px 0 2px;font-size:22px;line-height:1.15;font-weight:800;color:inherit}
-.lead-back h3{color:var(--ink)}
+.lead .lead-name{margin:10px 0 2px;font-size:22px;line-height:1.15;font-weight:800;color:inherit}
+.lead-back .lead-name{color:var(--ink)}
 .lead-addr{margin:0;font-size:15px;opacity:.85}
 .lead-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:5px}
 .t-brass{background:var(--brass);color:#1A1A14}
@@ -330,13 +330,13 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
       <article class="lead lead-back">
         <div class="lead-top"><span>The Turnover</span><span>Filed Oct 14</span></div>
         <span class="lead-tag t-open">Opening soon</span>
-        <h3>North Beach Pizza</h3>
+        <p class="lead-name">North Beach Pizza</p>
         <p class="lead-addr">2072 University Ave, Berkeley</p>
       </article>
       <article class="lead lead-front">
         <div class="lead-top"><span>Permit Watch</span><span>Filed Oct 2</span></div>
         <span class="lead-tag t-brass">Trades still open</span>
-        <h3>Office build-out, 9th floor</h3>
+        <p class="lead-name">Office build-out, 9th floor</p>
         <p class="lead-addr">88 Spear St, San Francisco</p>
         <dl class="lead-facts">
           <div><dt>Est. value</dt><dd>$2.17M</dd></div>
@@ -367,7 +367,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
         <button type="button" role="tab" id="tab-p" aria-controls="panel-p" aria-selected="false" tabindex="-1">I'm a contractor</button>
       </div>
       <div class="panels">
-      <figure class="filing" id="panel-t" role="tabpanel" aria-labelledby="tab-t">
+      <div class="filing" id="panel-t" role="tabpanel" aria-labelledby="tab-t">
         <div class="filing-head"><strong>The Turnover</strong><span>Bay Area · filings Oct 12–14, 2026</span></div>
         <ul class="rows">
           <li class="row"><span class="tag t-open">Opening soon</span><b>North Beach Pizza · Berkeley</b><span class="meta">2072 University Ave · new beer &amp; wine restaurant license · filed Oct 14</span><span class="why">Kitchen, refrigeration and suppliers are still being chosen.</span></li>
@@ -376,8 +376,8 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
           <li class="row"><span class="tag t-close">Closed or paused</span><b>Bentley's / Shuck It! Oysters &amp; Seafood · Martinez</b><span class="meta">610 Main St · license canceled Oct 12</span><span class="why">A kitchen's worth of equipment may be coming free.</span></li>
         </ul>
         <figcaption class="filing-foot">From California ABC filings. Each issue covers the week's Bay Area filings with business, address, owner and license type.</figcaption>
-      </figure>
-      <figure class="filing" id="panel-p" role="tabpanel" aria-labelledby="tab-p">
+      </div>
+      <div class="filing" id="panel-p" role="tabpanel" aria-labelledby="tab-p">
         <div class="filing-head"><strong>Permit Watch</strong><span>SF + San Jose · permits Oct 2–13, 2026</span></div>
         <ul class="rows">
           <li class="row"><span class="tag t-open">Trades open</span><b>Office build-out, 9th floor · 88 Spear St, SF</b><span class="meta">Est. $2,170,000 · permit filed Oct 2, not yet issued</span><span class="why">Permit says mechanical, electrical and plumbing will be permitted separately.</span></li>
@@ -386,7 +386,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
           <li class="row"><span class="tag t-lic">GC named</span><b>Slice House, new restaurant · 685 Coleman Ave, San Jose</b><span class="meta">$400,000 · 2,549 sq ft · issued Oct 6 · GC: Quality Food Service Construction</span><span class="why">Building, electrical, plumbing and mechanical approved.</span></li>
         </ul>
         <figcaption class="filing-foot">From San Francisco and San José building-permit records. <a href="/permits.html">How Permit Watch works →</a></figcaption>
-      </figure>
+      </div>
       </div>
     </div>
   </section>
