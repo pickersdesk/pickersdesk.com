@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/work-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Picker's Desk", "legalName": "Global Qwest, Inc.", "url": "https://pickersdesk.com/", "description": "Picker's Desk turns public records into short, plain-English sales leads for small local businesses: restaurant openings, closings and ownership changes, and commercial build-outs for the trades.", "areaServed": "San Francisco Bay Area, California", "logo": "https://pickersdesk.com/icon-512.png", "email": "roger@pickersdesk.com", "address": {"@type": "PostalAddress", "streetAddress": "3000-F Danville Blvd #142", "addressLocality": "Alamo", "addressRegion": "CA", "postalCode": "94507", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Roger Billeci"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Picker's Desk", "url": "https://pickersdesk.com/", "description": "Picker's Desk turns public records into short, plain-English sales leads for small local businesses: restaurant openings, closings and ownership changes, and commercial build-outs for the trades.", "areaServed": "San Francisco Bay Area, California", "logo": "https://pickersdesk.com/icon-512.png", "email": "roger@pickersdesk.com", "founder": {"@type": "Person", "name": "Roger Billeci"}}</script>
 <style>
 @font-face{font-family:"Work Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/work-sans-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Work Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/work-sans-latin-600-normal.woff2) format("woff2")}
@@ -293,6 +293,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
 @media (max-width:620px){.tiers{grid-template-columns:minmax(0,1fr);gap:24px}.t-pw{order:-1}.tier-for{min-height:0}}
 </style>
 <style>footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 0}footer nav a:hover{text-decoration:underline}footer p a{display:inline-block;padding:6px 0}footer .fine{flex-basis:100%;font-size:13px}</style>
+<style>#reports .group{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:36px 0 14px;font-size:18px}#reports .group span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 10px;border-radius:999px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -392,15 +393,24 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
 
   <section id="reports">
     <div class="wrap">
-      <p class="kicker">Reports</p>
-      <h2>One desk, many records.</h2>
-      <p>Each report follows one kind of public record and goes to the businesses that can act on it. Same method every time: straight from the source, sorted, in plain English.</p>
+      <p class="kicker">The desk</p>
+      <h2>We watch public records so you find the deal first.</h2>
+      <p>Every report follows one kind of public record and goes to the people who can act on it. Same method every time: straight from the official source, sorted, in plain English.</p>
+      <h3 class="group"><span>Leads</span> Find your next customer</h3>
       <div class="cards">
         <a class="card live" href="#turnover"><span class="state on">Now publishing</span><h3>The Turnover</h3><p>Bay Area restaurants and bars opening, closing and changing hands, from state liquor-license filings and city registrations.</p><span class="more">Who it's for →</span></a>
-        
         <a class="card" href="/permits.html"><span class="state on">Pilot · SF + San Jose</span><h3>Permit Watch</h3><p>Bay Area commercial build-outs and tenant improvements, filtered for electrical, HVAC and refrigeration contractors. Who&#39;s building, how big, and which trades may still be open.</p><span class="more">See how it works →</span></a>
-        <div class="card"><span class="state">Planned</span><h3>Property tax sales</h3><p>Tax-defaulted properties headed to county auction, with dates, minimum bids and parcel details.</p></div>
-        <div class="card"><span class="state">Planned</span><h3>Surplus finds</h3><p>Government surplus and liquidation auctions across Northern California, sorted by what's actually worth bidding on.</p></div>
+        <div class="card"><span class="state">In development</span><h3>Before the Permit</h3><p>Planning applications filed months before a building permit, so you can meet the architect and owner while the project is still on paper.</p></div>
+      </div>
+      <h3 class="group"><span>Deals</span> Find something worth buying</h3>
+      <div class="cards">
+        <div class="card"><span class="state">Planned</span><h3>Tax Sale Watch</h3><p>California tax-defaulted properties headed to county auction, with sale dates, minimum bids and parcel details from each county&#39;s official notice.</p></div>
+        <div class="card"><span class="state">Planned</span><h3>Surplus Finds</h3><p>Government surplus auctions, with what&#39;s for sale, where it sits and when bidding closes, from official public listings.</p></div>
+      </div>
+      <h3 class="group"><span>Signals</span> What every report is built on</h3>
+      <div class="cards">
+        <div class="card"><span class="state">Building daily</span><h3>Closings &amp; ownership changes</h3><p>Businesses that surrender a license or change hands. Useful to liquidators, used-equipment buyers and anyone who wants to meet the new owner first.</p></div>
+        <div class="card"><span class="state">Building daily</span><h3>Address history</h3><p>What was here before, and what&#39;s been filed since. We started archiving the records every day in October 2026, so the history only gets deeper.</p></div>
       </div>
       <p class="ask">Want a public record tracked for your business, or a report for your area? <a href="#request">Request it here</a>.</p>
     </div>
@@ -560,9 +570,9 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
 </main>
 
 <footer><div class="wrap">
-  <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a> · 3000-F Danville Blvd #142, Alamo, CA 94507</p>
+  <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
   <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav>
-  <p class="fine">Reports are built from public records, including California Department of Alcoholic Beverage Control filings and city business and permit records. Picker's Desk is independent and not affiliated with any government agency. Entries reflect records as published and aren't independently verified; a filing doesn't guarantee an opening, closing or project. © 2026 Picker's Desk, a trade name of Global Qwest, Inc.</p>
+  <p class="fine">Reports are built from public records, including California Department of Alcoholic Beverage Control filings and city business and permit records. Picker's Desk is independent and not affiliated with any government agency. Entries reflect records as published and aren't independently verified; a filing doesn't guarantee an opening, closing or project. © 2026 Picker's Desk</p>
 </div></footer>
 <script>
 (function(){
