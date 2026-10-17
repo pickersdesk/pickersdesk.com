@@ -161,7 +161,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
-<link rel="stylesheet" href="/site.css?v=9eb0b677">
+<link rel="stylesheet" href="/site.css?v=68185f11">
 <script src="/textsize.js?v=1d6bad35"></script>
 <script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
@@ -277,8 +277,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <p>Permits are counted by the date they were issued, except San Francisco, where we count the date the application was filed. Our San Francisco archive is kept by application date, so counting it by issue date would compare uneven windows. The Trends page labels San Francisco "applications filed."</p>
 
 <h2>How a permit gets a category</h2>
-<p>We read the work description the city wrote on each permit and match these words (case doesn't matter). Where a city publishes its own yes/no field or category for the same thing, we use that too: San Francisco marks ADUs, Marin County has its own "EV Charging Station" category, and Campbell has its own "Photovoltaic" category (used for solar there). Our word lists are narrow on purpose; we'd rather miss a permit than count a wrong one.</p>
-<ul><li><b>EV chargers:</b> <code>\bev\s*(charg|station|stall|supply)|electric vehicle|\bevse\b|\bevcs\b|vehicle charg|charging station</code></li><li><b>Solar:</b> <code>\bsolar\b|photovoltaic|\bp\.?v\.?\s*(system|panel|array|module)</code></li><li><b>Battery storage:</b> <code>battery (energy )?storage|energy storage system|\bbess\b|powerwall|\bess\b (system|install)</code></li><li><b>Heat pumps:</b> <code>heat ?pump(?!\s*(ventless\s*)?dryer)|mini[- ]?split</code></li><li><b>ADUs:</b> <code>\bj?adus?\b|accessory dwelling|in-law unit|granny unit</code></li><li><b>Restaurant build-outs:</b> <code>restaurant|\bcaf[eé]\b|coffee shop|bakery|brew ?pub|brewery|taproom|commercial kitchen|kitchen hood|type i hood|grease (duct|interceptor|trap)</code></li><li><b>Lab build-outs:</b> <code>laborator(y|ies)|life science|biotech|clean ?room|vivarium|research lab|\blab (tenant|build|space|ti\b|remodel)</code></li><li><b>Pickleball / padel courts:</b> <code>pickle ?ball|\bpadel\b</code></li></ul>
+<p>We read the work description each city wrote on its permits and sort them by the kind of work they describe. Where a city keeps its own category for the same thing, we use the city's category. We sort conservatively: when a description is unclear, we leave the permit out rather than risk counting it wrong.</p>
+<ul><li><b>EV chargers:</b> Permits whose record mentions EV chargers or charging stations.</li><li><b>Solar:</b> Permits whose record mentions solar or photovoltaic (PV) systems.</li><li><b>Battery storage:</b> Permits whose record mentions battery or energy storage.</li><li><b>Heat pumps:</b> Permits whose record mentions heat pumps or mini-splits.</li><li><b>ADUs:</b> Permits whose record mentions an accessory dwelling unit (ADU).</li><li><b>Restaurant build-outs:</b> Permits whose record mentions a restaurant, café, bakery, brewery or commercial kitchen work.</li></ul>
 <p>A permit can be in more than one category (solar with a battery, for example). Counts are permits, not projects: one project can have several permits.</p>
 
 <h2>The rules for what we show</h2>

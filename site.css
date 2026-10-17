@@ -60,3 +60,6 @@ footer,.crumbs ol{color:#4a524e}
 .city-chips{list-style:none;padding:0;margin:16px 0;display:flex;flex-wrap:wrap;gap:8px}
 .city-chips a{display:inline-flex;align-items:center;min-height:44px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card,#fff);color:var(--ink);text-decoration:none;font-weight:600}
 .city-chips a:hover,.city-chips a:focus-visible{border-color:var(--ink)}
+
+/* Oct 17 2026: Trends added to the menu; between tablet and wide desktop, hide "Sample" (it is on the homepage itself) so the menu stays on one row */
+@media (min-width:901px) and (max-width:1279px){.nav a[href$="#sample"]{display:none}}
