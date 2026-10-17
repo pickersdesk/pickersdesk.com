@@ -295,6 +295,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
 <style>footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 0}footer nav a:hover{text-decoration:underline}footer p a{display:inline-block;padding:6px 0}footer .fine{flex-basis:100%;font-size:13px}</style>
 <style>#reports .group{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:36px 0 14px;font-size:18px}#reports .group span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 10px;border-radius:999px}</style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:14px}}</style>
+<style id="next-link">.sub-msg .next-link{font-weight:700;color:inherit;text-decoration:underline;display:inline-block;padding:4px 0}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -518,10 +519,10 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
           <ul class="mini">
             <li>Any city, county or state in the US</li>
             <li>Restaurants and bars, commercial permits, or another public record you'd want tracked</li>
-            <li>One confirmation email, then we only write when your area is ready or we have a question</li>
+            <li>One short note now, then we only write when your area is ready or we have a question</li>
           </ul>
         </div>
-        <form class="sub req" action="https://app.kit.com/forms/10053154/subscriptions" method="post" id="reqform" data-ok="Request received. Check your inbox for a one-click confirmation email from Roger at Picker's Desk." novalidate>
+        <form class="sub req" action="https://app.kit.com/forms/10053154/subscriptions" method="post" id="reqform" data-ok="Got it. Your request is counted, and a short note is on its way to your inbox." data-next="/status.html" data-next-label="See everything we cover today →" data-done="Request received" novalidate>
           <label for="req-area">Area you sell into</label>
           <input id="req-area" name="fields[requested_area]" type="text" placeholder="e.g. Sacramento County, CA" maxlength="120" required>
           <label for="req-biz">What you sell</label>
@@ -591,7 +592,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
       fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
         .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
         .then(function(x){
-          if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');b.textContent='Check your inbox';}
+          if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');var nx=f.getAttribute('data-next');if(nx){var a=document.createElement('a');a.href=nx;a.className='next-link';a.textContent=f.getAttribute('data-next-label')||'Open it now';m.appendChild(document.createTextNode(' '));m.appendChild(a);}b.textContent=f.getAttribute('data-done')||'Check your inbox';}
           else{throw new Error('bad');}
         })
         .catch(function(){ b.disabled=false; b.textContent=label; f.submit(); });

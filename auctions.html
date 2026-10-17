@@ -225,6 +225,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .sub.req input,.sub.req select{font:inherit;font-size:16px;width:100%;min-height:48px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--text)}
 .sub.req .sub-msg{color:var(--muted)}
 .sub.req .sub-msg.ok{color:var(--open,#2F7D4F)}
+.sub-msg .next-link{font-weight:700;color:inherit;text-decoration:underline;display:inline-block;padding:4px 0}
 .sub.req .sub-msg.err{color:var(--close,#9B2C1F)}
 @media (max-width:760px){.reqbox{grid-template-columns:minmax(0,1fr)}}
 </style>
@@ -386,9 +387,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
     <p class="kicker">Auction alerts</p>
     <h2>Hear when a county posts its next sale.</h2>
     <p>One short email when a Bay Area county announces a new property sale or a notable surplus auction. Nothing else.</p>
-    <ul class="mini"><li>From the agency's own notice, with the link</li><li>Unsubscribe anytime</li></ul>
+    <ul class="mini"><li>No confirmation step: you're on the list the moment you sign up</li><li>From the agency's own notice, with the link</li><li>Unsubscribe anytime</li></ul>
   </div>
-  <form class="sub req" action="https://app.kit.com/forms/10053154/subscriptions" method="post" data-ok="Got it. Check your inbox for a one-click confirmation email from Roger at Picker's Desk." novalidate>
+  <form class="sub req" action="https://app.kit.com/forms/10057331/subscriptions" method="post" data-ok="You're on the list. The calendar on this page is always current, a copy of the link is in your inbox now, and we'll email you when a county posts a new sale." data-done="You're on the list" novalidate>
     <input type="hidden" name="fields[business_type]" value="Auction alerts">
     <label for="au-what">What you're after</label>
     <select id="au-what" name="fields[requested_area]" required><option value="">Choose one</option><option value="Auctions: property">Property (tax-defaulted land and homes)</option><option value="Auctions: vehicles and equipment">Vehicles and equipment</option><option value="Auctions: both">Both</option></select>
@@ -428,7 +429,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
       fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
         .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
         .then(function(x){
-          if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');b.textContent='Check your inbox';}
+          if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');var nx=f.getAttribute('data-next');if(nx){var a=document.createElement('a');a.href=nx;a.className='next-link';a.textContent=f.getAttribute('data-next-label')||'Open it now';m.appendChild(document.createTextNode(' '));m.appendChild(a);}b.textContent=f.getAttribute('data-done')||'Check your inbox';}
           else{throw new Error('bad');}
         })
         .catch(function(){ b.disabled=false; b.textContent=label; f.submit(); });
