@@ -47,3 +47,10 @@ footer,.crumbs ol{color:#4a524e}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 /* Desktop header: keep logo, menu, text-size button and the sign-up button on one row */
 @media (min-width:1000px){.top .wrap{flex-wrap:nowrap}.top .nav{gap:4px 18px}.top .nav a{font-size:1.0625rem;white-space:nowrap}.top .btn{white-space:nowrap}}
+/* Homepage hero cards: the front card stays in normal flow so its box always holds its text,
+   whatever the screen width or text size (fixes cards spilling over the numbers band on iPhone) */
+.hero-art{min-height:0}
+.lead-front{position:relative;top:auto;margin-top:4rem}
+/* Sample lists: the label column grows with the text; on phones the label sits above the name */
+@media (min-width:641px){.filing .row{grid-template-columns:11.5rem minmax(0,1fr)}}
+@media (max-width:640px){.row,.filing .row{grid-template-columns:minmax(0,1fr)}.row .tag,.filing .tag{grid-row:auto;justify-self:start}.row .why{grid-column:1}}
