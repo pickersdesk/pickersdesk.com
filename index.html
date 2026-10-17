@@ -627,7 +627,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
         .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
         .then(function(x){
           if(x.ok&&x.j&&x.j.status==='success'){f.reset();m.className='sub-msg ok';m.textContent=f.getAttribute('data-ok');var nx=f.getAttribute('data-next');if(nx){var a=document.createElement('a');a.href=nx;a.className='next-link';a.textContent=f.getAttribute('data-next-label')||'Open it now';m.appendChild(document.createTextNode(' '));m.appendChild(a);}b.textContent=f.getAttribute('data-done')||'Check your inbox';}
-          else{throw new Error('bad');}
+          else if(x.j&&x.j.status==='quarantined'&&/^https:\/\/app\.kit\.com\//.test(x.j.url||'')){location.href=x.j.url;}else{throw new Error('bad');}
         })
         .catch(function(){ b.disabled=false; b.textContent=label; f.submit(); });
     });
