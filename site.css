@@ -46,7 +46,8 @@ footer,.crumbs ol{color:#4a524e}
 .tabs button{white-space:normal;text-align:center;flex:1 1 auto}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 /* Desktop header: keep logo, menu, text-size button and the sign-up button on one row */
-@media (min-width:1000px){.top .wrap{flex-wrap:nowrap}.top .nav{gap:4px 18px}.top .nav a{font-size:1.0625rem;white-space:nowrap}.top .btn{white-space:nowrap}}
+@media (min-width:1000px){.top .wrap{flex-wrap:nowrap}.top .nav{gap:4px 16px;flex-wrap:nowrap}.top .nav a{font-size:1rem;white-space:nowrap}.top .btn{white-space:nowrap}}
+@media (min-width:1000px) and (max-width:1150px){.top .nav a[href="/#sample"]{display:none}}
 /* Homepage hero cards: the front card stays in normal flow so its box always holds its text,
    whatever the screen width or text size (fixes cards spilling over the numbers band on iPhone) */
 .hero-art{min-height:0}
