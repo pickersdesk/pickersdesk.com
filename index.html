@@ -415,7 +415,7 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
         <div class="card"><span class="state">Building daily</span><h3>Address history</h3><p>What was here before, and what&#39;s been filed since. We started archiving the records every day in October 2026, so the history only gets deeper.</p></div>
         <a class="card" href="/status.html"><span class="state on">Updated every weekday</span><h3>Data status</h3><p>Every source we use, when we last checked it, and what changed, including the days when nothing did. Straight from the agency, never copied from other sites.</p><span class="more">See today&#39;s check →</span></a>
       </div>
-      <p class="ask">Want a public record tracked for your business, or a report for your area? <a href="#request">Request it here</a>.</p>
+      <p class="ask">Want a public record tracked for your business, or a report for your area? <a href="#request">Request it here</a>, or <a href="#next">vote on what we build next</a>.</p>
     </div>
   </section>
 
@@ -508,6 +508,37 @@ a.card:hover,.card.live:hover{transform:translateY(-2px);box-shadow:0 14px 30px 
       <p class="ask"><b>Founding members</b> keep their launch price for as long as they stay subscribed. <a href="/terms.html">Terms</a></p>
     </div>
   </section>
+
+  <section id="next">
+    <div class="wrap">
+      <p class="kicker">In development</p>
+      <h2>What should we build next?</h2>
+      <p>Our archive grows every business day. These are the next ways we could put it to work. None of them exist yet. Pick the one you'd use and we'll tell you first when it's ready. The most requested gets built first.</p>
+      <form class="sub req wl" action="https://app.kit.com/forms/10053154/subscriptions" method="post" id="wlform" data-ok="You're on the list. We'll write when it's ready, and a short note is on its way now." data-next="/status.html" data-next-label="See everything we cover today →" data-done="You're on the list" novalidate>
+        <fieldset>
+          <legend class="sr">Pick the one you'd use</legend>
+          <div class="cards wl-cards">
+            <label class="card wl-card"><input type="radio" name="fields[requested_area]" value="Waitlist: Address history" required><span class="state">Waitlist</span><h3>Address history</h3><p>Type in a commercial address and see every license, permit and business filing there since our archive began. For brokers, landlords and anyone buying a business.</p></label>
+            <label class="card wl-card"><input type="radio" name="fields[requested_area]" value="Waitlist: Restaurant spaces coming free"><span class="state">Waitlist</span><h3>Restaurant spaces coming free</h3><p>Kitchens likely to go vacant, from license surrenders and closings, listed by address. For restaurant brokers, landlords and operators looking for a space.</p></label>
+            <label class="card wl-card"><input type="radio" name="fields[requested_area]" value="Waitlist: Data downloads"><span class="state">Waitlist</span><h3>Data downloads</h3><p>The day-by-day record as a spreadsheet: licenses, permits and registrations by area and date range. Buy once, no subscription.</p></label>
+            <label class="card wl-card"><input type="radio" name="fields[requested_area]" value="Waitlist: Reports for your customers"><span class="state">Waitlist</span><h3>Reports for your customers</h3><p>Supply houses, dealers and associations send Permit Watch or The Turnover to their own customers, under their own name.</p></label>
+          </div>
+        </fieldset>
+        <div class="wl-row">
+          <div><label for="wl-biz">What you do (optional)</label>
+          <input id="wl-biz" name="fields[business_type]" type="text" placeholder="e.g. commercial broker, supply house" maxlength="120"></div>
+          <div><label for="wl-email">Work email</label>
+          <input id="wl-email" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" required></div>
+          <button class="btn" type="submit">Put me on the list</button>
+        </div>
+        <p class="sub-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+<style id="wl-style">.wl fieldset{border:0;margin:0;padding:0;min-width:0}.wl-cards{margin-top:20px}.sub.req label.wl-card{cursor:pointer;position:relative;font-weight:400;font-size:inherit;color:var(--text);margin-top:0}.sub.req label.wl-card p{font-size:15px}.wl-card input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;margin:0}.wl-card:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink);background:var(--paper-2)}.wl-card:has(input:checked) .state{color:var(--open);background:var(--open-bg)}.wl-card:has(input:checked) .state::before{content:"\2713\00a0"}.wl-card:has(input:focus-visible){outline:3px solid var(--brass);outline-offset:2px}.wl-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:10px 16px;align-items:end;margin-top:20px}.wl-row>div{display:grid;gap:6px;min-width:0}.wl-row .btn{width:auto;min-height:48px;white-space:nowrap}@media (max-width:720px){.wl-row{grid-template-columns:minmax(0,1fr)}.wl-row .btn{width:100%}}</style>
+<script>
+(function(){var f=document.getElementById('wlform');if(!f)return;f.addEventListener('change',function(e){if(e.target.type==='radio'){var m=f.querySelector('.sub-msg');if(m.className.indexOf('err')>-1){m.className='sub-msg';m.textContent='';}}});f.addEventListener('submit',function(ev){if(!f.querySelector('input[type=radio]:checked')){ev.preventDefault();ev.stopImmediatePropagation();var m=f.querySelector('.sub-msg');m.className='sub-msg err';m.textContent='Pick one of the four above first.';f.querySelector('input[type=radio]').focus();}});})();
+</script>
 
   <section id="request">
     <div class="wrap">

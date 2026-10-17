@@ -1,0 +1,30 @@
+# Picker's Desk
+
+> Picker's Desk turns public records into short, plain-English weekly sales leads for small local businesses in the San Francisco Bay Area. Every entry comes straight from the government agency that keeps the record: California liquor-license filings, city and county building permits, city business registrations, and county auction notices. Facts from the record, no opinions.
+
+Picker's Desk is a trade name of Global Qwest, Inc., based in California. Contact: roger@pickersdesk.com.
+
+Who it's for: independent businesses of about 3 to 30 people that sell to other local businesses and can't justify enterprise data software. Main audiences are commercial electrical, HVAC and refrigeration contractors, and companies that sell to restaurants (equipment dealers, refrigeration and hood service, distributors, linen, POS, liquidators).
+
+How it works: every business day we save full copies of the public records we track, compare them with the day before, and sort what changed into openings, ownership changes, closings and new construction. We started archiving daily in October 2026, so the history of each address grows over time.
+
+## Reports
+
+- [Permit Watch](https://pickersdesk.com/permits.html): Bay Area commercial build-outs and tenant improvements from city and county building permits, filtered for electrical, HVAC and refrigeration contractors. Shows who's building, project size and value, the general contractor where listed, and whether electrical and mechanical work is still to be permitted. Pilot open now; planned price $49/month founding, $79/month standard.
+- [The Turnover](https://pickersdesk.com/#turnover): Bay Area restaurants and bars opening, closing and changing hands, from California ABC liquor-license filings and city business registrations. Free weekly email; Turnover Lite planned at $19/month.
+- [Bay Area Public Auctions](https://pickersdesk.com/auctions.html): free calendar of county tax-defaulted property sales and government surplus vehicle and equipment auctions across the nine Bay Area counties. Dates come only from each agency's own notice.
+- [Sample reports](https://pickersdesk.com/reports/): real sample issues.
+- [Pricing](https://pickersdesk.com/#plans): Free, Turnover Lite ($19/month, planned), Permit Watch ($49/month founding), Pro ($99/month, planned: both reports, several areas, alerts, address history).
+
+## About the data
+
+- [About our data](https://pickersdesk.com/data.html): sources, how filings are sorted (duplicates, transfers, withdrawn applications, closings), limits, and how to report a correction.
+- [Data status](https://pickersdesk.com/status.html): every source we use, when it was last checked, and what changed. Rebuilt every weekday.
+- [About](https://pickersdesk.com/about.html): who runs Picker's Desk and why.
+
+## Optional
+
+- [In development](https://pickersdesk.com/#next): ideas on the waitlist, including address history lookups, restaurant spaces coming free, one-time data downloads, and reports that supply houses send to their own customers.
+- [Request an area](https://pickersdesk.com/#request): businesses outside the Bay Area can ask for their region.
+- [Terms](https://pickersdesk.com/terms.html)
+- [Privacy](https://pickersdesk.com/privacy.html)
