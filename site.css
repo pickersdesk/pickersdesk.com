@@ -63,3 +63,17 @@ footer,.crumbs ol{color:#4a524e}
 
 /* Oct 17 2026: Trends added to the menu; between tablet and wide desktop, hide "Sample" (it is on the homepage itself) so the menu stays on one row */
 @media (min-width:901px) and (max-width:1279px){.nav a[href$="#sample"]{display:none}}
+
+/* Oct 17 2026 polish: data tables read like rows, not a wall. Quiet zebra striping, a soft hover,
+   a tinted highlight column on the pricing table, and Yes/— shown as clear marks. Cards on phones stay plain. */
+@media (min-width:641px){
+  main table tbody tr:nth-child(even)>*{background:rgba(30,58,50,.035)}
+  main table tbody tr:hover>*{background:rgba(201,147,46,.09)}
+  .plans{border:1px solid var(--line);border-radius:14px;overflow:hidden;border-collapse:separate;border-spacing:0}
+  .plans thead th{border-bottom:2px solid var(--ink)}
+  .plans tbody th{color:var(--ink)}
+  .plans td:nth-child(4){background:rgba(201,147,46,.10)!important;border-left:1px solid rgba(201,147,46,.45);border-right:1px solid rgba(201,147,46,.45)}
+  .plans tbody tr:last-child td:nth-child(4){border-bottom:3px solid var(--brass)}
+}
+.plans .yes{display:inline-flex;align-items:center;gap:6px}
+.plans .yes::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--open,#2F6B4F) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;flex:none}

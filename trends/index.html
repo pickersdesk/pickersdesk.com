@@ -161,7 +161,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
-<link rel="stylesheet" href="/site.css?v=68185f11">
+<link rel="stylesheet" href="/site.css?v=3c4548c3">
 <script src="/textsize.js?v=1d6bad35"></script>
 <script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
@@ -205,7 +205,10 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .tr{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
 .tr h1{font-size:clamp(2rem,5.6vw,3.5rem);line-height:1.04;max-width:20ch}
 .tr .lede{max-width:60ch;font-size:clamp(1.125rem,2.2vw,1.25rem)}
-.tr .asof{font-family:var(--mono);font-size:1.125rem;color:var(--brass-ink);letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px}
+.tr-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:0;list-style:none}
+.tr-chips li{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:1.125rem;line-height:1.2;background:#F3E3C4;color:#6B4C12;border:1px solid rgba(122,87,20,.28)}
+.tr-chips li.live{background:#DCEBDF;color:#24563F;border-color:rgba(47,107,79,.32)}
+.tr-chips li.live::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 0 3px rgba(47,107,79,.18)}
 .tr-jump{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:24px 0 0}
 .tr-jump a{display:inline-block;padding:10px 14px;min-height:44px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;font-size:1.125rem}
 .tr-jump a:hover{border-color:var(--ink)}
@@ -264,7 +267,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 </header>
 <main id="main" class="wrap tr">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Trends</li></ol></nav>
-<p class="asof">Trends · Jul – Sep 2026 vs a year earlier · data as of Oct 17, 2026</p>
+<ul class="tr-chips" aria-label="Period and data date"><li>Jul – Sep 2026 vs a year earlier</li><li class="live">Data as of Oct 17, 2026</li></ul>
 <h1>What's being built, and where</h1>
 <p class="lede">Permit counts by kind of work, straight from each city's own records. Every place is compared only with itself: Q3 2026 against the same months a year earlier. Counting rules are on the <a href="/trends/methodology.html">methodology page</a>.</p>
 <ul class="tr-jump"><li><a href="#all">All permits</a></li><li><a href="#ev_charger">EV chargers</a></li><li><a href="#solar">Solar</a></li><li><a href="#battery">Battery storage</a></li><li><a href="#heat_pump">Heat pumps</a></li><li><a href="#adu">ADUs</a></li><li><a href="#restaurant">Restaurant build-outs</a></li></ul>
