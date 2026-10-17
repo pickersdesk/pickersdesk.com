@@ -161,7 +161,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
-<link rel="stylesheet" href="/site.css?v=80b4d0e6">
+<link rel="stylesheet" href="/site.css?v=9eb0b677">
 <script src="/textsize.js?v=1d6bad35"></script>
 <style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
 .report-page{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
@@ -223,6 +223,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .cp-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;max-width:820px}
 .cp-list a{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:56px;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none}
 .cp-list b{font-size:1.125rem}
+.cp-note{border-left:4px solid var(--brass,#C9932E);background:var(--card);border-radius:0 10px 10px 0;padding:10px 14px;margin:16px 0 0;max-width:68ch}
 .fine{color:var(--muted);max-width:68ch;margin-top:24px}
 @media (min-width:720px){.cp-now{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
@@ -251,6 +252,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <p class="eyebrow">Permit Watch · San Mateo</p>
 <h1>Commercial building permits in San Mateo</h1>
 <p class="lede">New commercial jobs worth a call for electrical, HVAC, refrigeration and plumbing shops, picked from San Mateo's own permit records every weekday. Updated October 17, 2026.</p>
+<p class="cp-note"><b>Commercial jobs only.</b> Looking up a permit for a home? San Mateo lets anyone search its records on <a href="https://cityofsanmateoca-energovweb.tylerhost.net/apps/selfservice" rel="noopener">its own permit site</a>.</p>
 <div class="cp-now"><div><b>1</b><span>jobs worth a call this week</span></div><div><b>3</b><span>in the last 4 weeks</span></div></div>
 <h2>Sample: jobs from two to four weeks ago</h2>
 <p>Here's what a Permit Watch list looks like. This week's jobs go to pilot members first; the public sample is older.</p>
@@ -264,7 +266,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 </main>
 <footer><div class="wrap">
   <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
-  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
   <p class="fine">© 2026 Picker's Desk</p>
 </div></footer>
 </body>
