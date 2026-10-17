@@ -1,0 +1,49 @@
+/* Picker's Desk mobile-first layer (Oct 17, 2026). Loaded after each page's own styles.
+   Text sizes on every page are in rem (scripts/mobile_type.py), so the text-size button scales them all. */
+html{font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html[data-ts="1"]{font-size:112.5%}
+html[data-ts="2"]{font-size:125%}
+body{font-size:1.125rem}
+main{overflow-wrap:break-word}
+img,svg,video{max-width:100%;height:auto}
+
+/* Tap targets: 44px minimum for every link or control that stands alone */
+.top .nav a,footer nav a,footer p a,.crumbs a,.btn,button,summary,select,input[type=submit],
+a.more,.more a,a.card .more{min-height:44px;display:inline-flex;align-items:center}
+.top .nav a{padding-inline:6px}
+.logo{min-height:44px}
+.links a,.card-links a,.src-links a,p.source a,td a{min-height:44px;display:inline-flex;align-items:center}
+.crumbs a{padding:0 2px}
+input:not([type=radio]):not([type=checkbox]),select,textarea{min-height:48px;font-size:1.125rem}
+.skip:focus{min-height:44px;display:inline-flex;align-items:center}
+
+/* Text-size button (added by /textsize.js) */
+.ts-btn{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:2px;
+  border:1px solid var(--line,#d9d2c3);border-radius:10px;background:var(--card,#fff);color:var(--ink,#1E3A32);
+  font:700 1rem/1 var(--sans,system-ui,sans-serif);cursor:pointer;padding:0 10px}
+.ts-btn small{font-size:.75em}
+.ts-btn:focus-visible{outline:3px solid var(--brass,#C9932E);outline-offset:2px}
+.top .wrap{row-gap:8px}
+
+/* Contrast: muted text stays readable on paper backgrounds */
+footer,.crumbs ol{color:#4a524e}
+
+/* Tables become cards on phones: one card per row, each value labelled */
+@media (max-width:640px){
+  table.cards-sm{min-width:0!important}
+  table.cards-sm,table.cards-sm thead,table.cards-sm tbody,table.cards-sm tr,table.cards-sm th,table.cards-sm td{display:block;width:auto}
+  table.cards-sm thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  table.cards-sm tr{border:1px solid var(--line,#d9d2c3);border-radius:12px;background:var(--card,#fff);padding:12px 14px;margin:0 0 12px}
+  table.cards-sm tbody th{font-size:1.125rem;padding:0 0 6px;text-align:left;border:0}
+  table.cards-sm td{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border:0;border-top:1px solid var(--line,#d9d2c3);text-align:right}
+  table.cards-sm td::before{content:attr(data-label);font-weight:600;text-align:left;color:var(--ink,#1E3A32)}
+  table.cards-sm td{flex-wrap:wrap}
+  table.cards-sm td>*{white-space:normal;min-width:0}
+  .tablewrap{overflow:visible}
+}
+/* Pill tabs wrap to full-width rows when text is large */
+.tabs{max-width:100%}
+.tabs button{white-space:normal;text-align:center;flex:1 1 auto}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Desktop header: keep logo, menu, text-size button and the sign-up button on one row */
+@media (min-width:1000px){.top .wrap{flex-wrap:nowrap}.top .nav{gap:4px 18px}.top .nav a{font-size:1.0625rem;white-space:nowrap}.top .btn{white-space:nowrap}}
