@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data report card | Picker&#x27;s Desk</title>
+<meta name="description" content="How fresh, complete and deep each public data source is, measured from the records every weekday.">
+<link rel="canonical" href="https://pickersdesk.com/report-card.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Picker's Desk">
+<meta property="og:title" content="Data report card | Picker&#x27;s Desk">
+<meta property="og:description" content="How fresh, complete and deep each public data source is, measured from the records every weekday.">
+<meta property="og:url" content="https://pickersdesk.com/report-card.html">
+<meta property="og:image" content="https://pickersdesk.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Data report card", "url": "https://pickersdesk.com/report-card.html", "dateModified": "2026-10-17", "description": "How fresh, complete and deep each public data source is, measured from the records every weekday."}</script>
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#1E3A32">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/work-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/work-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Work Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/work-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Work Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/work-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Work Sans";font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/work-sans-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+
+/* Layout: a single reading column on paper; the hero states the thesis, then one "filing card" shows the product itself, then plain how-it-works and contact. */
+:root{
+  --paper:#F4EFE4; --paper-2:#EBE4D4; --card:#FFFDF8; --ink:#1E3A32; --ink-2:#2C5045; --brass:#C9932E; --brass-ink:#7A5714; --text:#2A302D; --muted:#59615B; --line:#D8CFBC;
+  --open:#2F6B4F; --open-bg:#DCEBDF; --hands:#7A5714; --hands-bg:#F3E3C4; --close:#9A3B2E; --close-bg:#F2DAD4;
+  --sans:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --gutter:max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(20px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink-2)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:16px;top:16px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:10}
+.wrap{max-width:1080px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+
+/* Header */
+.top{padding-top:max(18px, env(safe-area-inset-top, 0px));padding-bottom:18px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo svg{width:40px;height:40px;flex:none}
+.logo span{font-weight:800;font-size:19px;letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--ink);-webkit-tap-highlight-color:transparent;transition:background-color .15s ease,color .15s ease}
+.btn:hover{background:var(--ink-2);border-color:var(--ink-2);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn.small{min-height:44px;padding:9px 18px;font-size:15px}
+
+/* Hero */
+.hero{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
+.eyebrow{margin:0 0 18px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+h1{margin:0;font-weight:800;color:var(--ink);font-size:clamp(40px,8.2vw,88px);line-height:.98;letter-spacing:-.02em;max-width:12ch;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brass)}
+.lede{margin:24px 0 0;max-width:36ch;font-size:clamp(19px,2.3vw,23px);line-height:1.45;color:var(--text)}
+.cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta small{flex-basis:100%;color:var(--muted);font-size:14px}
+
+/* Section scaffolding */
+section{padding-block:clamp(48px,7vw,88px)}
+.band{background:var(--card);border-block:1px solid var(--line)}
+h2{margin:0 0 14px;font-weight:800;color:var(--ink);font-size:clamp(28px,4.4vw,44px);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+.kicker{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+p{margin:0 0 14px;max-width:62ch}
+
+/* The Turnover */
+.report{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:start}
+.who{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
+.who li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start}
+.who li::before{content:"";width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--brass)}
+.who b{color:var(--ink)}
+
+/* Filing card: the product, shown as the record it is */
+.filing{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(30,58,50,.35)}
+.filing-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 20px;background:var(--ink);color:var(--paper)}
+.filing-head strong{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:15px}
+.filing-head span{font-family:var(--mono);font-size:13px;opacity:.85}
+.rows{list-style:none;margin:0;padding:6px 0}
+.row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;padding:14px 20px;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.tag{grid-row:span 2;align-self:start;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:5px;white-space:nowrap}
+.t-open{color:var(--open);background:var(--open-bg)} .t-hands{color:var(--hands);background:var(--hands-bg)} .t-close{color:var(--close);background:var(--close-bg)}
+.row b{color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+.row .meta{font-family:var(--mono);font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.filing-foot{padding:12px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);background:var(--paper-2)}
+
+/* How it works: a real sequence, so it is numbered */
+.steps{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:18px;border-top:3px solid var(--ink)}
+.steps li::before{content:counter(s);display:block;font-family:var(--mono);font-size:14px;color:var(--brass-ink);margin-bottom:8px}
+.steps h3{margin:0 0 6px;font-size:20px;color:var(--ink);font-weight:600}
+.steps p{margin:0;font-size:16px;color:var(--text)}
+
+/* Principles */
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.facts div{padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.facts h3{margin:0 0 6px;font-size:18px;color:var(--ink);font-weight:600}
+.facts p{margin:0;font-size:15.5px}
+
+/* Closing CTA */
+.signup{text-align:left}
+.signup .box{background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:24px;align-items:center}
+.signup h2{color:var(--paper)}
+.signup p{color:#E4DCCB;margin:0}
+.signup .btn{background:var(--brass);border-color:var(--brass);color:#1A1A14}
+.signup .btn:hover{background:#D9A748;border-color:#D9A748;color:#1A1A14}
+
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sub{display:grid;gap:10px;min-width:0;width:100%;max-width:380px}
+.sub input{font:inherit;font-size:16px;width:100%;min-height:48px;padding:12px 16px;border-radius:12px;border:1px solid #3E5F55;background:#F4EFE4;color:#1A1A14;-webkit-appearance:none;appearance:none}
+.sub input::placeholder{color:#6B716C}
+.sub input:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.sub .btn{width:100%}
+.sub .btn[disabled]{opacity:.7;cursor:progress}
+.sub-msg{margin:0;min-height:1.4em;font-size:15px;color:#E4DCCB}
+.sub-msg.ok{color:#F4EFE4;font-weight:600}
+.sub-msg.err{color:#F2C4B8}
+footer{padding-block:36px max(36px, env(safe-area-inset-bottom, 0px));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer p{margin:0;max-width:70ch}
+
+@media (max-width:820px){
+  .sub{max-width:none}
+  .report{grid-template-columns:minmax(0,1fr)}
+  .steps,.facts{grid-template-columns:minmax(0,1fr)}
+  .signup .box{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .logo span{font-size:16px;letter-spacing:.1em}
+  .top .btn{display:none}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .tag{grid-row:auto;justify-self:start}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{.top .btn,.cta,.signup{display:none}body{background:#fff}}
+</style>
+<style>.done{padding-block:clamp(48px,10vw,120px)}.done h1{max-width:18ch}.notes{max-width:68ch;display:grid;gap:16px;margin-top:28px}.notes h2{font-size:22px;margin:14px 0 0}.notes p,.notes ul{margin:0}.notes ul{padding-left:20px;display:grid;gap:6px}.done .lede{max-width:44ch}.updated{font-size:14px;color:var(--muted);margin-top:10px}.sig{margin-top:8px;font-weight:600;color:var(--ink)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 0}footer nav a:hover{text-decoration:underline}footer p a{display:inline-block;padding:6px 0}footer .fine{flex-basis:100%;font-size:13px}</style>
+<style>/* Nav */
+.nav{display:flex;gap:4px 22px;flex-wrap:wrap;margin-left:auto;margin-right:8px}
+.nav a{color:var(--ink);font-weight:600;font-size:15.5px;text-decoration:none;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+.nav a:hover{text-decoration:underline}
+@media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
+</style>
+<style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:14px}}</style>
+<style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
+.report-page{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
+.report-page h1{font-size:clamp(32px,5.6vw,56px);line-height:1.04;max-width:20ch}
+.report-page .lede{max-width:52ch}
+.report-page .lede+p{margin-top:14px}
+.crumbs ol{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:14px;color:var(--muted)}
+.crumbs li+li::before{content:"/";margin-right:8px;color:var(--line)}
+.crumbs a{color:var(--ink);display:inline-block;padding:6px 0}
+.jobs{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:18px;max-width:760px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0}
+.job h2{font-size:clamp(20px,2.6vw,24px);margin:0 0 4px;line-height:1.2}
+.job .what{margin:0 0 12px;color:var(--text)}
+.job dl{margin:0;display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:6px 14px;font-size:15.5px}
+.job dt{color:var(--muted)}
+.job dd{margin:0;color:var(--text);overflow-wrap:anywhere}
+.job .mono{font-family:var(--mono);font-size:14px}
+.flag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;color:var(--open);background:var(--open-bg)}
+.flag.no{color:var(--muted);background:var(--paper-2)}
+.more{margin:22px 0 0;font-size:19px;font-weight:600;color:var(--ink)}
+.cta-box{margin-top:40px;background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(24px,5vw,44px);max-width:760px}
+.cta-box h2{color:var(--paper);font-size:clamp(24px,3.6vw,34px)}
+.cta-box p{color:#E4DCCB}
+.cta-box .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta-box .btn{background:var(--brass);border-color:var(--brass);color:#1A1A14}
+.cta-box .btn:hover{background:#D9A748;border-color:#D9A748;color:#1A1A14}
+.cta-box .btn.ghost{background:transparent;color:var(--paper);border-color:#E4DCCB}
+.cta-box .btn.ghost:hover{background:var(--paper);color:var(--ink)}
+.source{margin-top:28px;font-size:14px;color:var(--muted);max-width:70ch}
+.source a{display:inline-block;padding:4px 0}
+.weeks{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px;max-width:760px}
+.weeks a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink);font-weight:600}
+.weeks a:hover{border-color:var(--ink)}
+.weeks span{display:block;font-weight:400;font-size:15px;color:var(--muted);margin-top:2px}
+.archive h2{font-size:clamp(24px,3.4vw,32px);margin-top:40px}
+.archive .cta-box h2{margin-top:0}
+@media (max-width:480px){.job dl{grid-template-columns:minmax(0,1fr);gap:0}.job dd{margin-bottom:8px}}
+</style>
+<style>
+.rc{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
+.rc h1{font-size:clamp(32px,5.6vw,56px);line-height:1.04;max-width:18ch}
+.rc .lede{max-width:58ch;font-size:clamp(18px,2.2vw,20px)}
+.rc h2.grp{font-size:clamp(22px,3vw,28px);margin:40px 0 0}
+.cards{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:16px;max-width:820px}
+.card-rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0}
+.card-rc h3{font-size:clamp(19px,2.4vw,22px);margin:0;line-height:1.25}
+.card-rc .by{margin:2px 0 12px;color:var(--muted);font-size:16px}
+.card-rc .by a{color:var(--ink);display:inline;padding:0}
+.rc-facts{margin:0;display:grid;grid-template-columns:1fr;gap:10px}
+.rc-facts div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;min-width:0;border-top:1px solid var(--line);padding-top:10px;font-size:18px;line-height:1.4}
+.rc-facts dt{color:var(--muted);font-weight:600}
+.rc-facts dd{margin:0 0 0 auto;text-align:right;font-weight:600;overflow-wrap:anywhere}
+.bar{display:block;height:8px;border-radius:4px;background:var(--line);margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ink)}
+.gaps{margin:12px 0 0;padding-left:20px;font-size:17px;line-height:1.5}
+.note-rc{max-width:68ch;margin-top:40px}
+@media (min-width:720px){.rc-facts{grid-template-columns:1fr 1fr;column-gap:28px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Picker's Desk home">
+      <svg viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="400" fill="#C9932E"/><line x1="310" y1="330" x2="310" y2="640" stroke="#1E3A32" stroke-width="64" stroke-linecap="round"/><circle cx="430" cy="330" r="120" fill="none" stroke="#1E3A32" stroke-width="56"/><circle cx="430" cy="330" r="62" fill="#F4EFE4" opacity="0.55"/><circle cx="398" cy="300" r="16" fill="#F4EFE4"/></svg>
+      <span>Picker's Desk</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#sample">Sample</a>
+      <a href="/permits.html">Permit Watch</a>
+      <a href="/auctions.html">Auctions</a>
+      <a href="/#plans">Pricing</a>
+      <a href="/about.html">About</a>
+    </nav>
+    <a class="btn small" href="/#signup" data-subscribe>Get The Turnover</a>
+  </div>
+</header>
+<main id="main" class="wrap rc">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/data.html">Our data</a></li><li aria-current="page">Data report card</li></ol></nav>
+<h1>Data report card</h1>
+<p class="lede">What each public source contains, measured from the records themselves: how fresh it is, how complete, and how far back it goes. Updated every weekday. Last measured Oct 17, 2026.</p>
+<h2 class="grp">Permit Watch</h2><ul class="cards"><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Berkeley · from <a href="https://aca-prod.accela.com/BERKELEY/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Berkeley</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>299</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>41% of records<span class="bar" aria-hidden="true"><i style="width:41%"></i></span></dd></div><div><dt>Contractor named</dt><dd>29% of records<span class="bar" aria-hidden="true"><i style="width:29%"></i></span></dd></div><div><dt>Parcel number</dt><dd>50% of records<span class="bar" aria-hidden="true"><i style="width:50%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Campbell · from <a href="https://www.arcgis.com/home/item.html?id=51782f1886994824b39443678628fcaa" rel="nofollow">City of Campbell</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 13, 2026 (4 days old)</dd></div><div><dt>Records on file</dt><dd>4,026</dd></div><div><dt>Oldest record in our copy</dt><dd>May 2, 2013</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data map service</dd></div></dl><ul class="gaps"><li>The record has no job value field.</li><li>The record doesn&#x27;t name a contractor.</li><li>The record has no parcel number field.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Concord · from <a href="https://aca-prod.accela.com/CONCORD/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Concord</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>152</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>93% of records<span class="bar" aria-hidden="true"><i style="width:93%"></i></span></dd></div><div><dt>Contractor named</dt><dd>0% of records<span class="bar" aria-hidden="true"><i style="width:0%"></i></span></dd></div><div><dt>Parcel number</dt><dd>95% of records<span class="bar" aria-hidden="true"><i style="width:95%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Dublin · from <a href="https://dublinca-energovweb.tylerhost.net/apps/selfservice" rel="nofollow">City of Dublin</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>288</dd></div><div><dt>Oldest record in our copy</dt><dd>Feb 20, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>9% of records<span class="bar" aria-hidden="true"><i style="width:9%"></i></span></dd></div><div><dt>Contractor named</dt><dd>4% of records<span class="bar" aria-hidden="true"><i style="width:4%"></i></span></dd></div><div><dt>Parcel number</dt><dd>96% of records<span class="bar" aria-hidden="true"><i style="width:96%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Fremont · from <a href="https://aca-prod.accela.com/COF/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Fremont</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>197</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>76% of records<span class="bar" aria-hidden="true"><i style="width:76%"></i></span></dd></div><div><dt>Contractor named</dt><dd>51% of records<span class="bar" aria-hidden="true"><i style="width:51%"></i></span></dd></div><div><dt>Parcel number</dt><dd>76% of records<span class="bar" aria-hidden="true"><i style="width:76%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Hayward · from <a href="https://haywardca-energovpub.tylerhost.net/Apps/SelfService" rel="nofollow">City of Hayward</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>407</dd></div><div><dt>Oldest record in our copy</dt><dd>May 25, 2022</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>10% of records<span class="bar" aria-hidden="true"><i style="width:10%"></i></span></dd></div><div><dt>Contractor named</dt><dd>11% of records<span class="bar" aria-hidden="true"><i style="width:11%"></i></span></dd></div><div><dt>Parcel number</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Marin County (unincorporated) · from <a href="https://data.marincounty.gov/d/mkbn-caye" rel="nofollow">County of Marin Community Development Agency</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>8,622</dd></div><div><dt>Oldest record in our copy</dt><dd>Apr 9, 2018</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>97% of records<span class="bar" aria-hidden="true"><i style="width:97%"></i></span></dd></div><div><dt>Contractor named</dt><dd>91% of records<span class="bar" aria-hidden="true"><i style="width:91%"></i></span></dd></div><div><dt>Parcel number</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div></dl></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Menlo Park · from <a href="https://aca-prod.accela.com/MENLOPARK/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Menlo Park</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>68</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div><div><dt>Contractor named</dt><dd>78% of records<span class="bar" aria-hidden="true"><i style="width:78%"></i></span></dd></div><div><dt>Parcel number</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Milpitas · from <a href="https://trakit.ci.milpitas.ca.gov/etrakit3/Search/permit.aspx" rel="nofollow">City of Milpitas</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>130</dd></div><div><dt>Oldest record in our copy</dt><dd>Aug 28, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>0% of records<span class="bar" aria-hidden="true"><i style="width:0%"></i></span></dd></div><div><dt>Contractor named</dt><dd>54% of records<span class="bar" aria-hidden="true"><i style="width:54%"></i></span></dd></div></dl><ul class="gaps"><li>The record has no parcel number field.</li><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Oakland · from <a href="https://aca-prod.accela.com/OAKLAND/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Oakland</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>157</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>34% of records<span class="bar" aria-hidden="true"><i style="width:34%"></i></span></dd></div><div><dt>Contractor named</dt><dd>1% of records<span class="bar" aria-hidden="true"><i style="width:1%"></i></span></dd></div><div><dt>Parcel number</dt><dd>95% of records<span class="bar" aria-hidden="true"><i style="width:95%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Pleasanton · from <a href="https://aca-prod.accela.com/pleasanton/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Pleasanton</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>25</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 28, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>76% of records<span class="bar" aria-hidden="true"><i style="width:76%"></i></span></dd></div><div><dt>Contractor named</dt><dd>60% of records<span class="bar" aria-hidden="true"><i style="width:60%"></i></span></dd></div><div><dt>Parcel number</dt><dd>68% of records<span class="bar" aria-hidden="true"><i style="width:68%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">San Francisco · from <a href="https://data.sfgov.org/Housing-and-Buildings/Building-Permits/i98e-djp9" rel="nofollow">City and County of San Francisco (DataSF)</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>44,266</dd></div><div><dt>Oldest record in our copy</dt><dd>Jan 1, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>99% of records<span class="bar" aria-hidden="true"><i style="width:99%"></i></span></dd></div><div><dt>Parcel number</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div></dl><ul class="gaps"><li>The record doesn&#x27;t name a contractor.</li></ul></li><li class="card-rc"><h3>Active building permits</h3>
+<p class="by">San José · from <a href="https://data.sanjoseca.gov/" rel="nofollow">City of San José</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>17,434</dd></div><div><dt>Oldest record in our copy</dt><dd>Oct 22, 1997</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>30% of records<span class="bar" aria-hidden="true"><i style="width:30%"></i></span></dd></div><div><dt>Contractor named</dt><dd>63% of records<span class="bar" aria-hidden="true"><i style="width:63%"></i></span></dd></div><div><dt>Parcel number</dt><dd>62% of records<span class="bar" aria-hidden="true"><i style="width:62%"></i></span></dd></div></dl></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">San Mateo · from <a href="https://cityofsanmateoca-energovweb.tylerhost.net/apps/selfservice" rel="nofollow">City of San Mateo</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>498</dd></div><div><dt>Oldest record in our copy</dt><dd>Nov 7, 2022</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>5% of records<span class="bar" aria-hidden="true"><i style="width:5%"></i></span></dd></div><div><dt>Contractor named</dt><dd>3% of records<span class="bar" aria-hidden="true"><i style="width:3%"></i></span></dd></div><div><dt>Parcel number</dt><dd>87% of records<span class="bar" aria-hidden="true"><i style="width:87%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">San Ramon · from <a href="https://tyeplweb.sanramon.ca.gov/EnerGov_Prod/SelfService" rel="nofollow">City of San Ramon</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>380</dd></div><div><dt>Oldest record in our copy</dt><dd>May 24, 2024</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>2% of records<span class="bar" aria-hidden="true"><i style="width:2%"></i></span></dd></div><div><dt>Contractor named</dt><dd>2% of records<span class="bar" aria-hidden="true"><i style="width:2%"></i></span></dd></div><div><dt>Parcel number</dt><dd>97% of records<span class="bar" aria-hidden="true"><i style="width:97%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Santa Clara · from <a href="https://aca-prod.accela.com/SANTACLARA/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Santa Clara</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>340</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>44% of records<span class="bar" aria-hidden="true"><i style="width:44%"></i></span></dd></div><div><dt>Contractor named</dt><dd>33% of records<span class="bar" aria-hidden="true"><i style="width:33%"></i></span></dd></div><div><dt>Parcel number</dt><dd>44% of records<span class="bar" aria-hidden="true"><i style="width:44%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Sonoma County · from <a href="https://aca-prod.accela.com/SONOMACO/Cap/CapHome.aspx?module=Building" rel="nofollow">County of Sonoma (Permit Sonoma)</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>548</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>6% of records<span class="bar" aria-hidden="true"><i style="width:6%"></i></span></dd></div><div><dt>Contractor named</dt><dd>24% of records<span class="bar" aria-hidden="true"><i style="width:24%"></i></span></dd></div><div><dt>Parcel number</dt><dd>27% of records<span class="bar" aria-hidden="true"><i style="width:27%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Sunnyvale · from <a href="https://sunnyvaleca-energovpub.tylerhost.net/apps/SelfService" rel="nofollow">City of Sunnyvale</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>614</dd></div><div><dt>Oldest record in our copy</dt><dd>Apr 14, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>39% of records<span class="bar" aria-hidden="true"><i style="width:39%"></i></span></dd></div><div><dt>Contractor named</dt><dd>20% of records<span class="bar" aria-hidden="true"><i style="width:20%"></i></span></dd></div><div><dt>Parcel number</dt><dd>99% of records<span class="bar" aria-hidden="true"><i style="width:99%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Walnut Creek · from <a href="https://aca-prod.accela.com/WC/Cap/CapHome.aspx?module=Building" rel="nofollow">City of Walnut Creek</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>153</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 25, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Public permit search</dd></div><div><dt>Job value</dt><dd>89% of records<span class="bar" aria-hidden="true"><i style="width:89%"></i></span></dd></div><div><dt>Contractor named</dt><dd>0% of records<span class="bar" aria-hidden="true"><i style="width:0%"></i></span></dd></div><div><dt>Parcel number</dt><dd>90% of records<span class="bar" aria-hidden="true"><i style="width:90%"></i></span></dd></div></dl><ul class="gaps"><li>Read from the agency&#x27;s public permit search: each weekday we collect its most recent permits and keep every one, so our copy grows from the day we started. Job value and contractor sit on each permit&#x27;s own page, so the shares above count what we&#x27;ve been able to read so far.</li></ul></li></ul><h2 class="grp">The Turnover</h2><ul class="cards"><li class="card-rc"><h3>Liquor licenses, all of California</h3>
+<p class="by">California (Bay Area in The Turnover) · from <a href="https://www.abc.ca.gov/licensing/licensing-reports/" rel="nofollow">California Department of Alcoholic Beverage Control</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>129,686</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Daily statewide file</dd></div></dl></li><li class="card-rc"><h3>New food business registrations</h3>
+<p class="by">San Francisco · from <a href="https://data.sfgov.org/" rel="nofollow">City and County of San Francisco (DataSF)</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>8,184</dd></div><div><dt>Oldest record in our copy</dt><dd>Oct 1, 1968</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li></ul><h2 class="grp">Archived for future reports</h2><ul class="cards"><li class="card-rc"><h3>Commercial building permits</h3>
+<p class="by">Austin · from <a href="https://data.austintexas.gov/" rel="nofollow">City of Austin</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>26,791</dd></div><div><dt>Oldest record in our copy</dt><dd>Jan 1, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>8% of records<span class="bar" aria-hidden="true"><i style="width:8%"></i></span></dd></div><div><dt>Contractor named</dt><dd>89% of records<span class="bar" aria-hidden="true"><i style="width:89%"></i></span></dd></div></dl><ul class="gaps"><li>The record has no parcel number field.</li></ul></li><li class="card-rc"><h3>Food business licenses</h3>
+<p class="by">Berkeley · from <a href="https://data.cityofberkeley.info/" rel="nofollow">City of Berkeley</a></p>
+<dl class="rc-facts"><div><dt>Records on file</dt><dd>581</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl><ul class="gaps"><li>We can&#x27;t measure freshness here: the records carry no filing or issue date we can compare.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Chicago · from <a href="https://data.cityofchicago.org/" rel="nofollow">City of Chicago</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>57,593</dd></div><div><dt>Oldest record in our copy</dt><dd>Jan 1, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>84% of records<span class="bar" aria-hidden="true"><i style="width:84%"></i></span></dd></div></dl><ul class="gaps"><li>The record doesn&#x27;t name a contractor.</li><li>The record has no parcel number field.</li></ul></li><li class="card-rc"><h3>Food and liquor business licenses</h3>
+<p class="by">Chicago · from <a href="https://data.cityofchicago.org/" rel="nofollow">City of Chicago</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>14,661</dd></div><div><dt>Oldest record in our copy</dt><dd>Dec 16, 2010</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Active food businesses</h3>
+<p class="by">Los Angeles · from <a href="https://data.lacity.org/" rel="nofollow">City of Los Angeles</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 17, 2026 (0 days old)</dd></div><div><dt>Records on file</dt><dd>19,611</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 1, 1935</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Los Angeles · from <a href="https://data.lacity.org/" rel="nofollow">City of Los Angeles (LADBS)</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 10, 2026 (7 days old)</dd></div><div><dt>Records on file</dt><dd>114,147</dd></div><div><dt>Oldest record in our copy</dt><dd>Nov 28, 2016</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>94% of records<span class="bar" aria-hidden="true"><i style="width:94%"></i></span></dd></div><div><dt>Parcel number</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div></dl><ul class="gaps"><li>The record doesn&#x27;t name a contractor.</li></ul></li><li class="card-rc"><h3>Restaurants (from health inspections)</h3>
+<p class="by">New York City · from <a href="https://data.cityofnewyork.us/" rel="nofollow">New York City</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 14, 2026 (3 days old)</dd></div><div><dt>Records on file</dt><dd>17,460</dd></div><div><dt>Oldest record in our copy</dt><dd>Jan 2, 2026</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Active liquor licenses</h3>
+<p class="by">New York State · from <a href="https://data.ny.gov/" rel="nofollow">New York State Liquor Authority</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 17, 2026 (0 days old)</dd></div><div><dt>Records on file</dt><dd>60,020</dd></div><div><dt>Oldest record in our copy</dt><dd>Aug 3, 2020</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Inactive liquor licenses</h3>
+<p class="by">New York State · from <a href="https://data.ny.gov/" rel="nofollow">New York State Liquor Authority</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 14, 2026 (3 days old)</dd></div><div><dt>Records on file</dt><dd>63,374</dd></div><div><dt>Oldest record in our copy</dt><dd>Dec 20, 2011</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Pending liquor license applications</h3>
+<p class="by">New York State · from <a href="https://data.ny.gov/" rel="nofollow">New York State Liquor Authority</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>2,915</dd></div><div><dt>Oldest record in our copy</dt><dd>May 15, 2023</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Planning projects</h3>
+<p class="by">San Francisco · from <a href="https://data.sfgov.org/" rel="nofollow">City and County of San Francisco (DataSF)</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>2,146</dd></div><div><dt>Oldest record in our copy</dt><dd>Jan 2, 2025</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Parcel number</dt><dd>84% of records<span class="bar" aria-hidden="true"><i style="width:84%"></i></span></dd></div></dl><ul class="gaps"><li>The record has no job value field.</li><li>The record doesn&#x27;t name a contractor.</li></ul></li><li class="card-rc"><h3>Building permits</h3>
+<p class="by">Seattle · from <a href="https://data.seattle.gov/" rel="nofollow">City of Seattle</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 14, 2026 (3 days old)</dd></div><div><dt>Records on file</dt><dd>11,487</dd></div><div><dt>Oldest record in our copy</dt><dd>Apr 19, 2016</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div><div><dt>Job value</dt><dd>100% of records<span class="bar" aria-hidden="true"><i style="width:100%"></i></span></dd></div><div><dt>Contractor named</dt><dd>9% of records<span class="bar" aria-hidden="true"><i style="width:9%"></i></span></dd></div></dl><ul class="gaps"><li>The record has no parcel number field.</li></ul></li><li class="card-rc"><h3>Food business licenses</h3>
+<p class="by">Seattle · from <a href="https://data.seattle.gov/" rel="nofollow">City of Seattle</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 17, 2026 (0 days old)</dd></div><div><dt>Records on file</dt><dd>4,630</dd></div><div><dt>Oldest record in our copy</dt><dd>Dec 12, 1950</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Liquor licenses, all of Texas</h3>
+<p class="by">Texas · from <a href="https://data.texas.gov/" rel="nofollow">Texas Alcoholic Beverage Commission</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 16, 2026 (1 day old)</dd></div><div><dt>Records on file</dt><dd>127,996</dd></div><div><dt>Oldest record in our copy</dt><dd>Aug 23, 1985</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li><li class="card-rc"><h3>Pending liquor license applications</h3>
+<p class="by">Texas · from <a href="https://data.texas.gov/" rel="nofollow">Texas Alcoholic Beverage Commission</a></p>
+<dl class="rc-facts"><div><dt>Newest record</dt><dd>Oct 15, 2026 (2 days old)</dd></div><div><dt>Records on file</dt><dd>958</dd></div><div><dt>Oldest record in our copy</dt><dd>Sep 11, 2024</dd></div><div><dt>In our daily archive since</dt><dd>Oct 16, 2026</dd></div><div><dt>How it&#x27;s published</dt><dd>Open-data feed</dd></div></dl></li></ul>
+<section class="note-rc"><h2>How we measure</h2>
+<p>Every weekday we download each source from the agency that publishes it and count what's in the records: the newest filing date, how many records include a job value, a contractor or a parcel number, and the oldest date in our copy. These numbers describe the published records only. Agencies publish different fields for their own reasons, and a blank field isn't an error.</p>
+<p>Want a source or area we don't cover yet? <a href="/#request">Request your area</a>. For what changed each day, see <a href="/status.html">Data status</a>.</p></section>
+</main>
+<footer><div class="wrap">
+  <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
+  <p class="fine">© 2026 Picker's Desk</p>
+</div></footer>
+</body>
+</html>
