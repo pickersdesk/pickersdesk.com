@@ -1,16 +1,16 @@
 # Picker's Desk
 
-> Picker's Desk turns public records into short, plain-English weekly sales leads for small local businesses in the San Francisco Bay Area. Every entry comes straight from the government agency that keeps the record: California liquor-license filings, city and county building permits, city business registrations, and county auction notices. Facts from the record, no opinions.
+> Picker's Desk turns public records into short, plain-English weekly sales leads for small local businesses in the San Francisco Bay Area. Every entry comes straight from the government agency that keeps the record: California liquor-license filings, city and county building permits, city business registrations, and county auction notices. Facts come from the record; anything that is our reading of it is labeled as such.
 
 Picker's Desk is a trade name of Global Qwest, Inc., based in California. Contact: roger@pickersdesk.com.
 
-Who it's for: independent businesses of about 3 to 30 people that sell to other local businesses and can't justify enterprise data software. Main audiences are commercial electrical, HVAC and refrigeration contractors, and companies that sell to restaurants (equipment dealers, refrigeration and hood service, distributors, linen, POS, liquidators).
+Who it's for: independent businesses of about 3 to 30 people that sell to other local businesses and can't justify enterprise data software. Main audiences are commercial electrical, HVAC, refrigeration and plumbing contractors, and companies that sell to restaurants (equipment dealers, refrigeration and hood service, distributors, linen, POS, liquidators).
 
 How it works: every business day we save full copies of the public records we track, compare them with the day before, and sort what changed into openings, ownership changes, closings and new construction. We started archiving daily in October 2026, so the history of each address grows over time.
 
 ## Reports
 
-- [Permit Watch](https://pickersdesk.com/permits.html): Bay Area commercial build-outs and tenant improvements from city and county building permits, filtered for electrical, HVAC and refrigeration contractors. Shows who's building, project size and value, the general contractor where listed, and whether electrical and mechanical work is still to be permitted. Pilot open now; planned price $49/month founding, $79/month standard.
+- [Permit Watch](https://pickersdesk.com/permits.html): Bay Area commercial build-outs and tenant improvements from city and county building permits, filtered for electrical, HVAC, refrigeration and plumbing contractors. Shows who's building, project size and value, the general contractor where listed, and whether the electrical, mechanical or plumbing work is on the permit yet ("Trades open" means it isn't on the permit yet in the city's records; it doesn't confirm the work is unawarded or open for bid). Fields a city doesn't publish are marked "not provided by the city". Pilot open now; planned price $49/month founding, $79/month standard.
 - [The Turnover](https://pickersdesk.com/#turnover): Bay Area restaurants and bars opening, closing and changing hands, from California ABC liquor-license filings and city business registrations. Free weekly email; Turnover Lite planned at $19/month.
 - [Bay Area Public Auctions](https://pickersdesk.com/auctions.html): free calendar of county tax-defaulted property sales and government surplus vehicle and equipment auctions across the nine Bay Area counties. Dates come only from each agency's own notice.
 - [Building trends](https://pickersdesk.com/trends/): free charts of permit counts by kind of work (EV chargers, solar, battery storage, heat pumps, ADUs, restaurant build-outs) for San Francisco, Chicago, Austin, Seattle, Marin County and Campbell, each place compared only with its own past. [Methodology](https://pickersdesk.com/trends/methodology.html).

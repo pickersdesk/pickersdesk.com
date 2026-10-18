@@ -163,6 +163,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
 <link rel="stylesheet" href="/site.css?v=3c4548c3">
 <script src="/textsize.js?v=1d6bad35"></script>
+<script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
 .report-page{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
 .report-page h1{font-size:clamp(2rem,5.6vw,3.5rem);line-height:1.04;max-width:20ch}
@@ -181,6 +182,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .job .mono{font-family:var(--mono);font-size:1rem}
 .flag{display:inline-block;font-size:0.875rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;color:var(--open);background:var(--open-bg)}
 .flag.no{color:var(--muted);background:var(--paper-2)}
+.job dt .ours{font-size:.9em;white-space:nowrap}
 .more{margin:22px 0 0;font-size:1.1875rem;font-weight:600;color:var(--ink)}
 .cta-box{margin-top:40px;background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(24px,5vw,44px);max-width:760px}
 .cta-box h2{color:var(--paper);font-size:clamp(1.5rem,3.6vw,2.125rem)}
@@ -227,7 +229,6 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .fine{color:var(--muted);max-width:68ch;margin-top:24px}
 @media (min-width:720px){.cp-now{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
-<script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -250,7 +251,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
   </div>
 </header>
 <main id="main" class="wrap cp">
-<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a></li><li aria-current="page">San José</li></ol></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/permits/">Permits by city</a></li><li aria-current="page">San José</li></ol></nav>
 <p class="eyebrow">Permit Watch · San José</p>
 <h1>Commercial building permits in San José</h1>
 <p class="lede">New commercial jobs worth a call for electrical, HVAC, refrigeration and plumbing shops, picked from San José's own permit records every weekday. Updated October 17, 2026.</p>
@@ -258,7 +259,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <div class="cp-now"><div><b>5</b><span>jobs worth a call this week</span></div><div><b>25</b><span>in the last 4 weeks</span></div></div>
 <h2>Sample: jobs from two to four weeks ago</h2>
 <p>Here's what a Permit Watch list looks like. This week's jobs go to pilot members first; the public sample is older.</p>
-<ul class="cp-jobs"><li><b>101 Innovation Dr, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC: Mai Construction,inc</span><p>Altera Elevator TI (Tenant Improvement)</p><p class="meta">$550,000 · 100 sq ft · permit #2026-139282-CI · issued Sep 24 · scopes: building</p><p class="meta">Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>6375 San Ignacio Ave, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC: Graham, Joel R</span><p>Nokia Demo Only (Tenant Improvement)</p><p class="meta">$325,650 · permit #2026-140064-CI · issued Sep 29 · scopes: building</p><p class="meta">Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>5350 Hellyer Ave, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC: Bay Area Builders Inc.</span><p>Caes Restroom TI (Tenant Improvement)</p><p class="meta">$240,000 · permit #2026-138860-CI · issued Sep 24 · scopes: building</p><p class="meta">Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>170 S Market St, San José</b><span class="cp-tag">GC: Stager,jd</span><span class="cp-tag">Kitchen / refrigeration</span><p>SRP Academic Coffee Ste 3 (Tenant Improvement)</p><p class="meta">$300,000 · 2,050 sq ft · permit #2026-138406-CI · issued Sep 21 · scopes: building, electrical, plumbing</p></li><li><b>300 Holger Wy, San José</b><span class="cp-tag">GC: Devcon Construction Inc.</span><p>Nvidia Rack Installation (Tenant Improvement)</p><p class="meta">$1,664,913 · 2,460 sq ft · permit #2026-139284-CI · issued Sep 28 · scopes: building, electrical, plumbing, mechanical</p></li><li><b>3675 Cisco Wy, San José</b><span class="cp-tag">GC: Gci Inc.</span><p>Cisco Elec TI (Tenant Improvement)</p><p class="meta">$1,500,000 · permit #2026-135052-CI · issued Sep 23 · scopes: building, electrical</p></li></ul>
+<ul class="cp-jobs"><li><b>101 Innovation Dr, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC named</span><p>Altera Elevator TI (Tenant Improvement)</p><p class="meta">$550,000 · 100 sq ft · GC: Mai Construction,inc · permit #2026-139282-CI · issued Sep 24 · scopes: building</p><p class="meta">Our read: Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>6375 San Ignacio Ave, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC named</span><p>Nokia Demo Only (Tenant Improvement)</p><p class="meta">$325,650 · sq ft — · GC: Graham, Joel R · permit #2026-140064-CI · issued Sep 29 · scopes: building</p><p class="meta">Our read: Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>5350 Hellyer Ave, San José</b><span class="cp-tag">Trades open</span><span class="cp-tag">GC named</span><p>Caes Restroom TI (Tenant Improvement)</p><p class="meta">$240,000 · sq ft — · GC: Bay Area Builders Inc. · permit #2026-138860-CI · issued Sep 24 · scopes: building</p><p class="meta">Our read: Building approval only; electrical and mechanical aren&#x27;t on this permit.</p></li><li><b>170 S Market St, San José</b><span class="cp-tag">GC named</span><span class="cp-tag">Kitchen / refrigeration</span><p>SRP Academic Coffee Ste 3 (Tenant Improvement)</p><p class="meta">$300,000 · 2,050 sq ft · GC: Stager,jd · permit #2026-138406-CI · issued Sep 21 · scopes: building, electrical, plumbing</p></li><li><b>300 Holger Way, San José</b><span class="cp-tag">GC named</span><p>Nvidia Rack Installation (Tenant Improvement)</p><p class="meta">$1,664,913 · 2,460 sq ft · GC: Devcon Construction Inc. · permit #2026-139284-CI · issued Sep 28 · scopes: building, electrical, plumbing, mechanical</p></li><li><b>3675 Cisco Way, San José</b><span class="cp-tag">GC named</span><p>Cisco Elec TI (Tenant Improvement)</p><p class="meta">$1,500,000 · sq ft — · GC: Gci Inc. · permit #2026-135052-CI · issued Sep 23 · scopes: building, electrical</p></li></ul>
+<p class="fine">Address, value, square footage, dates, description, permit number and general contractor come straight from the city&#x27;s record. The tags and the “Our read” line are our reading of it. “Trades open” means the electrical, mechanical or plumbing work isn&#x27;t on the permit yet in the city&#x27;s records. It doesn&#x27;t confirm that work is unawarded or open for bid. “—” means the city&#x27;s record doesn&#x27;t provide that field.</p>
 <section class="cp-cta"><h2>Get this week's San José list</h2><p>Free during the pilot: the current list for your trade, every week, by email.</p><p><a class="btn" href="/permits.html#pilot">Join the pilot</a></p></section>
 <h2>About San José's permit records</h2>
 <p>Of the permits we read in full here, the city&#x27;s record shows job value on 30% and a contractor named on 63%. Source: City of San José building-permit records. See every source and how complete it is on the <a href="/report-card.html">data report card</a>. New to this? Read <a href="/blog/find-commercial-work-before-its-bid-sf-san-jose.html">how to find commercial work before it's bid</a>.</p>
@@ -268,7 +270,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 </main>
 <footer><div class="wrap">
   <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
-  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
   <p class="fine">© 2026 Picker's Desk</p>
 </div></footer>
 </body>

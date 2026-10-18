@@ -163,6 +163,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
 <link rel="stylesheet" href="/site.css?v=3c4548c3">
 <script src="/textsize.js?v=1d6bad35"></script>
+<script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <style>/* Report pages: one reading column; each job is a filing card with labelled facts. */
 .report-page{padding-block:clamp(40px,8vw,96px) clamp(40px,7vw,80px)}
 .report-page h1{font-size:clamp(2rem,5.6vw,3.5rem);line-height:1.04;max-width:20ch}
@@ -181,6 +182,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .job .mono{font-family:var(--mono);font-size:1rem}
 .flag{display:inline-block;font-size:0.875rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;color:var(--open);background:var(--open-bg)}
 .flag.no{color:var(--muted);background:var(--paper-2)}
+.job dt .ours{font-size:.9em;white-space:nowrap}
 .more{margin:22px 0 0;font-size:1.1875rem;font-weight:600;color:var(--ink)}
 .cta-box{margin-top:40px;background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(24px,5vw,44px);max-width:760px}
 .cta-box h2{color:var(--paper);font-size:clamp(1.5rem,3.6vw,2.125rem)}
@@ -227,7 +229,6 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .fine{color:var(--muted);max-width:68ch;margin-top:24px}
 @media (min-width:720px){.cp-now{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
-<script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -250,7 +251,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
   </div>
 </header>
 <main id="main" class="wrap cp">
-<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a></li><li aria-current="page">San Francisco</li></ol></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/permits/">Permits by city</a></li><li aria-current="page">San Francisco</li></ol></nav>
 <p class="eyebrow">Permit Watch · San Francisco</p>
 <h1>Commercial building permits in San Francisco</h1>
 <p class="lede">New commercial jobs worth a call for electrical, HVAC, refrigeration and plumbing shops, picked from San Francisco's own permit records every weekday. Updated October 17, 2026.</p>
@@ -258,7 +259,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <div class="cp-now"><div><b>10</b><span>jobs worth a call this week</span></div><div><b>93</b><span>in the last 4 weeks</span></div></div>
 <h2>Sample: jobs from two to four weeks ago</h2>
 <p>Here's what a Permit Watch list looks like. This week's jobs go to pilot members first; the public sample is older.</p>
-<ul class="cp-jobs"><li><b>88 Spear St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>9th floor: Partial interior TI includes new partitions, doors, ceilings, finishes, and millwork. MEP deferred.</p><p class="meta">$2,170,000 est. · permit #202610028988 · filed Oct 2</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li><li><b>1 Beach St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>Deferred MEP for pa#2026-0302-6788 suite 350.</p><p class="meta">$500,000 est. · permit #202609258635 · filed Sep 25</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li><li><b>680 Folsom St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>1st fl:suite 145 - demolition of non structural, interior partitions and doors. New construction to include doors, partitions, ceilings, lighting, plumbing and finishes. MEP…</p><p class="meta">$383,986 est. · permit #202609298766 · filed Sep 29</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li><li><b>350 Bush St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>Deferred MEP for ref pa 202608136550</p><p class="meta">$350,000 est. · permit #202609308833 · filed Sep 30</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li><li><b>888 Brannan St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>1st floor:interior demolition of non-structural elements &amp; new construction of 4 all gender restrooms &amp; new ADA upgrades for pot. No changes to exterior bldg, site, landscape,…</p><p class="meta">$250,000 est. · permit #202609298758 · filed Sep 29</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li><li><b>1 Beach St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>Deferred MEP for 202608206913 suite 150.</p><p class="meta">$187,000 est. · permit #202609258621 · filed Sep 25</p><p class="meta">Permit says MEP or tenant work will be permitted separately.</p></li></ul>
+<ul class="cp-jobs"><li><b>88 Spear St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>9th floor: Partial interior TI includes new partitions, doors, ceilings, finishes, and millwork. MEP deferred.</p><p class="meta">$2,170,000 est. · sq ft — · GC — · permit #202610028988 · filed Oct 2</p><p class="meta">Our read: Permit says MEP or tenant work will be permitted separately.</p></li><li><b>680 Folsom St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>1st fl:suite 145 - demolition of non structural, interior partitions and doors. New construction to include doors, partitions, ceilings, lighting, plumbing and finishes. MEP…</p><p class="meta">$383,986 est. · sq ft — · GC — · permit #202609298766 · filed Sep 29</p><p class="meta">Our read: Permit says MEP or tenant work will be permitted separately.</p></li><li><b>888 Brannan St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Just filed</span><p>1st floor:interior demolition of non-structural elements &amp; new construction of 4 all gender restrooms &amp; new ADA upgrades for pot. No changes to exterior bldg, site, landscape,…</p><p class="meta">$250,000 est. · sq ft — · GC — · permit #202609298758 · filed Sep 29</p><p class="meta">Our read: Permit says MEP or tenant work will be permitted separately.</p></li><li><b>140 New Montgomery St, San Francisco</b><span class="cp-tag">Trades open</span><span class="cp-tag">Kitchen / refrigeration</span><p>Suite 1: Interior improvements to an existing restaurant, not structural scope of work, no work at mezzannine. Electrical scope under separate permit. No exterior alterations.…</p><p class="meta">$165,000 est. · sq ft — · GC — · permit #202609158109 · issued Sep 28</p><p class="meta">Our read: Permit says MEP or tenant work will be permitted separately.</p></li><li><b>600 Harrison St, San Francisco</b><span class="cp-tag">Trades open</span><p>Suite #650: Interior demolition &amp; construction of non-structural elements including interior partition, doors, finishes, ceilings, lighting,mechanical systems, modification &amp;…</p><p class="meta">$2,000,000 est. · sq ft — · GC — · permit #202609298755 · issued Sep 30</p><p class="meta">Our read: Permit says MEP or tenant work will be permitted separately.</p></li><li><b>731 Columbus Ave, San Francisco</b><span class="cp-tag">Just filed</span><span class="cp-tag">Kitchen / refrigeration</span><p>1/F TI w/ added drink service and ext mods. Int:(n) mercantile and espresso bar layout, new pvt loung space; ADA upgrades. Add ADA restroom; New moment frames. Ext: New…</p><p class="meta">$1,942,026 est. · sq ft — · GC — · permit #202609027604 · filed Sep 23</p></li></ul>
+<p class="fine">Address, value, square footage, dates, description, permit number and general contractor come straight from the city&#x27;s record. The tags and the “Our read” line are our reading of it. “Trades open” means the electrical, mechanical or plumbing work isn&#x27;t on the permit yet in the city&#x27;s records. It doesn&#x27;t confirm that work is unawarded or open for bid. “—” means the city&#x27;s record doesn&#x27;t provide that field.</p>
 <section class="cp-cta"><h2>Get this week's San Francisco list</h2><p>Free during the pilot: the current list for your trade, every week, by email.</p><p><a class="btn" href="/permits.html#pilot">Join the pilot</a></p></section>
 <h2>About San Francisco's permit records</h2>
 <p>Of the permits we read in full here, the city&#x27;s record shows job value on 99%. Source: City and County of San Francisco (DataSF) building-permit records. See every source and how complete it is on the <a href="/report-card.html">data report card</a>. New to this? Read <a href="/blog/find-commercial-work-before-its-bid-sf-san-jose.html">how to find commercial work before it's bid</a>.</p>
@@ -268,7 +270,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 </main>
 <footer><div class="wrap">
   <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
-  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
   <p class="fine">© 2026 Picker's Desk</p>
 </div></footer>
 </body>
