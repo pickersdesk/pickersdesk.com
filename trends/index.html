@@ -246,6 +246,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 .tr-next{margin:14px 0 0;font-size:1.125rem}
 .tr-src{margin:10px 0 0;font-size:1.125rem;color:var(--muted)}
 .tr-note{max-width:68ch;margin-top:40px}
+.tr-cite textarea{width:100%;min-height:150px;margin-top:8px;font-family:var(--mono);font-size:1rem;line-height:1.4;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper,#fff);color:var(--text);resize:vertical}
+.tr-cite .btn{margin-top:10px;min-height:44px}
 .tr-cta{background:var(--ink);color:var(--paper);border-radius:16px;padding:clamp(22px,4vw,36px);margin-top:36px;max-width:860px}
 .tr-cta h2{color:var(--paper);margin:0}
 .tr-cta p{color:#E4DCCB}
@@ -290,8 +292,27 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>All permits, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">6,881</td><td class="n">4,896</td><td class="n">-29%</td></tr><tr><th scope="row">Chicago</th><td class="n">8,900</td><td class="n">9,146</td><td class="n">+3%</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">3,586</td><td class="n">4,247</td><td class="n">+18%</td></tr><tr><th scope="row">Seattle</th><td class="n">1,598</td><td class="n">1,634</td><td class="n">+2%</td></tr><tr><th scope="row">Marin County</th><td class="n">1,193</td><td class="n">1,153</td><td class="n">-3%</td></tr><tr><th scope="row">Campbell</th><td class="n">548</td><td class="n">475</td><td class="n">-13%</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite All permits" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;All permits, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;6,881&lt;/td&gt;&lt;td&gt;4,896&lt;/td&gt;&lt;td&gt;-29%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;8,900&lt;/td&gt;&lt;td&gt;9,146&lt;/td&gt;&lt;td&gt;+3%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;3,586&lt;/td&gt;&lt;td&gt;4,247&lt;/td&gt;&lt;td&gt;+18%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;1,598&lt;/td&gt;&lt;td&gt;1,634&lt;/td&gt;&lt;td&gt;+2%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Marin County&lt;/th&gt;&lt;td&gt;1,193&lt;/td&gt;&lt;td&gt;1,153&lt;/td&gt;&lt;td&gt;-3%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;548&lt;/td&gt;&lt;td&gt;475&lt;/td&gt;&lt;td&gt;-13%&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#all&quot;&gt;Picker&#x27;s Desk, All permits, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/permits/">See this week&#x27;s commercial permits by city</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026.</p>
 </section><section class="tr-card" id="ev_charger" aria-labelledby="h-ev_charger">
 <h2 id="h-ev_charger">EV chargers</h2>
 <p class="tr-what"><b>What this is:</b> Permits whose record mentions EV chargers or charging stations. <b>What it isn't:</b> The number of chargers installed.</p>
@@ -300,8 +321,27 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>EV chargers, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">14</td><td class="n">36</td><td class="n">too few to compare</td></tr><tr><th scope="row">Chicago</th><td class="n">116</td><td class="n">100</td><td class="n">-14%</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">32</td><td class="n">16</td><td class="n">-50% · we don&#x27;t know why yet</td></tr><tr><th scope="row">Seattle</th><td class="n">0</td><td class="n">2</td><td class="n">too few to compare</td></tr><tr><th scope="row">Marin County</th><td class="n">19</td><td class="n">41</td><td class="n">too few to compare</td></tr><tr><th scope="row">Campbell</th><td class="n">15</td><td class="n">24</td><td class="n">too few to compare</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite EV chargers" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;EV chargers, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;116&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;-14%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;32&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;-50% · we don&amp;#x27;t know why yet&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Marin County&lt;/th&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;41&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#ev_charger&quot;&gt;Picker&#x27;s Desk, EV chargers, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/permits/">See this week&#x27;s commercial permits by city</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Marin County, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Marin County permit data: County of Marin, made available under the Open Database License (ODbL 1.0). Data as of Oct 22, 2026.</p>
 </section><section class="tr-card" id="solar" aria-labelledby="h-solar">
 <h2 id="h-solar">Solar</h2>
 <p class="tr-what"><b>What this is:</b> Permits whose record mentions solar or photovoltaic (PV) systems. <b>What it isn't:</b> Installed capacity (kW).</p>
@@ -310,8 +350,26 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>Solar, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">115</td><td class="n">94</td><td class="n">-18%</td></tr><tr><th scope="row">Chicago</th><td class="n">577</td><td class="n">706</td><td class="n">+22%</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">27</td><td class="n">44</td><td class="n">+63% · we don&#x27;t know why yet</td></tr><tr><th scope="row">Seattle</th><td class="n">1</td><td class="n">1</td><td class="n">too few to compare</td></tr><tr><th scope="row">Campbell</th><td class="n">107</td><td class="n">75</td><td class="n">-30%</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite Solar" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;Solar, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;115&lt;/td&gt;&lt;td&gt;94&lt;/td&gt;&lt;td&gt;-18%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;577&lt;/td&gt;&lt;td&gt;706&lt;/td&gt;&lt;td&gt;+22%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;+63% · we don&amp;#x27;t know why yet&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;107&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;td&gt;-30%&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#solar&quot;&gt;Picker&#x27;s Desk, Solar, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/permits/">See this week&#x27;s commercial permits by city</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
 </section><section class="tr-card" id="battery" aria-labelledby="h-battery">
 <h2 id="h-battery">Battery storage</h2>
 <p class="tr-what"><b>What this is:</b> Permits whose record mentions battery or energy storage. <b>What it isn't:</b> Storage capacity (kWh).</p>
@@ -320,8 +378,26 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>Battery storage, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">15</td><td class="n">15</td><td class="n">too few to compare</td></tr><tr><th scope="row">Chicago</th><td class="n">636</td><td class="n">651</td><td class="n">+2%</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">1</td><td class="n">0</td><td class="n">too few to compare</td></tr><tr><th scope="row">Seattle</th><td class="n">1</td><td class="n">0</td><td class="n">too few to compare</td></tr><tr><th scope="row">Campbell</th><td class="n">19</td><td class="n">5</td><td class="n">too few to compare</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite Battery storage" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;Battery storage, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;636&lt;/td&gt;&lt;td&gt;651&lt;/td&gt;&lt;td&gt;+2%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#battery&quot;&gt;Picker&#x27;s Desk, Battery storage, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/permits/">See this week&#x27;s commercial permits by city</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
 </section><section class="tr-card" id="heat_pump" aria-labelledby="h-heat_pump">
 <h2 id="h-heat_pump">Heat pumps</h2>
 <p class="tr-what"><b>What this is:</b> Permits whose record mentions heat pumps or mini-splits. <b>What it isn't:</b> Every HVAC job. Many records don&#x27;t name the equipment.</p>
@@ -330,8 +406,25 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>Heat pumps, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">32</td><td class="n">39</td><td class="n">+22%</td></tr><tr><th scope="row">Chicago</th><td class="n">11</td><td class="n">13</td><td class="n">too few to compare</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">20</td><td class="n">11</td><td class="n">-45%</td></tr><tr><th scope="row">Campbell</th><td class="n">45</td><td class="n">47</td><td class="n">+4%</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite Heat pumps" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;Heat pumps, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;32&lt;/td&gt;&lt;td&gt;39&lt;/td&gt;&lt;td&gt;+22%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;-45%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;45&lt;/td&gt;&lt;td&gt;47&lt;/td&gt;&lt;td&gt;+4%&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#heat_pump&quot;&gt;Picker&#x27;s Desk, Heat pumps, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/permits/">See this week&#x27;s commercial permits by city</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
 </section><section class="tr-card" id="adu" aria-labelledby="h-adu">
 <h2 id="h-adu">ADUs</h2>
 <p class="tr-what"><b>What this is:</b> Permits whose record mentions an accessory dwelling unit (ADU). <b>What it isn't:</b> The number of new homes. One ADU can need several permits.</p>
@@ -339,6 +432,23 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <ul class="tr-bars" aria-hidden="true"><li><div class="tr-city">San Francisco (applications filed)<em>-15%</em></div><div class="tr-row"><b style="width:37.0%;background:#B07A1E"></b><span>131</span></div><div class="tr-row"><b style="width:31.7%;background:#17805A"></b><span>112</span></div></li><li><div class="tr-city">Chicago<em>+8%</em></div><div class="tr-row"><b style="width:6.8%;background:#B07A1E"></b><span>24</span></div><div class="tr-row"><b style="width:7.4%;background:#17805A"></b><span>26</span></div></li><li><div class="tr-city">Seattle<em>-78% · we don&#x27;t know why yet</em></div><div class="tr-row"><b style="width:82.0%;background:#B07A1E"></b><span>290</span></div><div class="tr-row"><b style="width:18.1%;background:#17805A"></b><span>64</span></div></li><li><div class="tr-city">Campbell<em>-14%</em></div><div class="tr-row"><b style="width:5.9%;background:#B07A1E"></b><span>21</span></div><div class="tr-row"><b style="width:5.1%;background:#17805A"></b><span>18</span></div></li></ul>
 <details><summary>Show as a table</summary>
 <table><caption>ADUs, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">131</td><td class="n">112</td><td class="n">-15%</td></tr><tr><th scope="row">Chicago</th><td class="n">24</td><td class="n">26</td><td class="n">+8%</td></tr><tr><th scope="row">Seattle</th><td class="n">290</td><td class="n">64</td><td class="n">-78% · we don&#x27;t know why yet</td></tr><tr><th scope="row">Campbell</th><td class="n">21</td><td class="n">18</td><td class="n">-14%</td></tr></tbody></table>
+</details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite ADUs" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;ADUs, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;131&lt;/td&gt;&lt;td&gt;112&lt;/td&gt;&lt;td&gt;-15%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;+8%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;290&lt;/td&gt;&lt;td&gt;64&lt;/td&gt;&lt;td&gt;-78% · we don&amp;#x27;t know why yet&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;-14%&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Seattle, Campbell permit records. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#adu&quot;&gt;Picker&#x27;s Desk, ADUs, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
 </details>
 <p class="tr-next">What to do with it: <a href="/reports/address-history/">Look up a property&#x27;s permit history</a></p>
 <p class="tr-src">Source: San Francisco, Chicago, Seattle, Campbell permit records. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
@@ -350,15 +460,35 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <details><summary>Show as a table</summary>
 <table><caption>Restaurant build-outs, Q3 2025 vs Q3 2026</caption><thead><tr><th scope="col">Place</th><th scope="col" class="n">Q3 2025</th><th scope="col" class="n">Q3 2026</th><th scope="col" class="n">Change</th></tr></thead><tbody><tr><th scope="row">San Francisco (applications filed)</th><td class="n">60</td><td class="n">60</td><td class="n">+0%</td></tr><tr><th scope="row">Chicago</th><td class="n">114</td><td class="n">103</td><td class="n">-10%</td></tr><tr><th scope="row">Austin (commercial only)</th><td class="n">163</td><td class="n">174</td><td class="n">+7%</td></tr><tr><th scope="row">Seattle</th><td class="n">26</td><td class="n">32</td><td class="n">+23%</td></tr><tr><th scope="row">Campbell</th><td class="n">3</td><td class="n">3</td><td class="n">too few to compare</td></tr></tbody></table>
 </details>
+<details class="tr-cite"><summary>Cite or embed this chart</summary>
+<p class="tr-src">Copy this into your page or article. It carries the numbers, the source, the data date and a link back, and loads nothing from us.</p>
+<textarea readonly rows="8" aria-label="HTML to cite Restaurant build-outs" onclick="this.select()">&lt;figure&gt;
+&lt;table&gt;
+&lt;caption&gt;Restaurant build-outs, Q3 2025 vs Q3 2026&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Place&lt;/th&gt;&lt;th&gt;Q3 2025&lt;/th&gt;&lt;th&gt;Q3 2026&lt;/th&gt;&lt;th&gt;Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;San Francisco (applications filed)&lt;/th&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;+0%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Chicago&lt;/th&gt;&lt;td&gt;114&lt;/td&gt;&lt;td&gt;103&lt;/td&gt;&lt;td&gt;-10%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Austin (commercial only)&lt;/th&gt;&lt;td&gt;163&lt;/td&gt;&lt;td&gt;174&lt;/td&gt;&lt;td&gt;+7%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Seattle&lt;/th&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;32&lt;/td&gt;&lt;td&gt;+23%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Campbell&lt;/th&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;too few to compare&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figcaption&gt;Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026. Chart: &lt;a href=&quot;https://pickersdesk.com/trends/#restaurant&quot;&gt;Picker&#x27;s Desk, Restaurant build-outs, Q3 2025 vs Q3 2026&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+<button type="button" class="btn tr-copy" hidden>Copy the HTML</button>
+</details>
 <p class="tr-next">What to do with it: <a href="/#signup">Restaurants opening and closing: The Turnover</a></p>
-<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
+<p class="tr-src">Source: San Francisco, Chicago, Austin, Seattle, Campbell permit records. Austin data: City of Austin Development Services Department. Chicago data: this report uses data modified for use from its original source, www.cityofchicago.org; the City of Chicago makes no claims as to the content, accuracy, timeliness or completeness of the data, which is subject to change. Data as of Oct 22, 2026.</p>
 </section>
+
 <section class="tr-cta"><h2>Get the chart of the week</h2><p>One chart and the fact behind it, in The Turnover, free.</p><p><a class="btn" href="/#signup">Get The Turnover free</a></p></section>
 <div class="tr-note">
 <h2>Read these numbers carefully</h2>
 <p>A change of 50% or more is marked "we don't know why yet." It may be a real shift, or a change in how a city words or files its records. Fewer than 20 permits in the earlier period shows the counts with no percentage. Los Angeles isn't shown while we confirm its data terms. San José isn't shown because its public file keeps active permits only. Marin County stopped publishing work descriptions in early 2026, so only its own EV-charging category is compared.</p>
 <p class="fine">Facts copied from public records as published and not independently verified. Not investment, legal or business advice. Spot something wrong? Email <a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a> with the city and category and we'll check it against the record. <a href="/trends/methodology.html">Methodology</a> · <a href="/report-card.html">Data report card</a></p>
 </div>
+<script>document.querySelectorAll('.tr-copy').forEach(function(b){var t=b.parentNode.querySelector('textarea');b.hidden=false;b.addEventListener('click',function(){t.select();try{navigator.clipboard.writeText(t.value);b.textContent='Copied'}catch(x){document.execCommand('copy')}})});</script>
 </main>
 <footer><div class="wrap">
   <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
