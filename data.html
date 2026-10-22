@@ -149,7 +149,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
-<link rel="stylesheet" href="/site.css?v=3c4548c3">
+<link rel="stylesheet" href="/site.css?v=e67bdbb7">
 <script src="/textsize.js?v=1d6bad35"></script>
 <script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <meta property="og:type" content="website">
@@ -182,45 +182,27 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
     <a class="btn small" href="/#signup" data-subscribe>Get The Turnover</a>
   </div>
 </header>
-<main id="main" class="wrap done">
+<main id="main" class="wrap kc">
   <p class="eyebrow">About our data</p>
   <h1>What the records say, and what they don't.</h1>
-  <div class="notes">
-    <p>Picker's Desk reports are compiled from public records published by government agencies. The Turnover is built from licensing reports published by the California Department of Alcoholic Beverage Control (ABC) and from city business registrations, such as San Francisco's. Permit Watch is built from building-permit records published by cities, currently 18 Bay Area cities and counties, from their own open data or public permit search (see <a href="/status.html">Data status</a> for every source). Picker's Desk is independent and is not affiliated with, endorsed by, or acting for any government or agency.</p>
-    <h2>Straight from the agency, checked every weekday</h2>
-    <p>Every record comes directly from the agency that keeps it: the city building department, the state licensing board, the county. We don't copy listings from other websites or buy them from data resellers, so there's no middleman in between to add errors or delays. We check every source each weekday morning and show what changed, including the days when nothing did. <a href="/status.html">See today's data status</a>. How fresh, complete and deep each source is: <a href="/report-card.html">data report card</a>. How 50 US metros compare: <a href="/markets.html">market scorecard</a>.</p>
-    <h2>We report the filing, not the future</h2>
-    <p>Each entry reflects what a public filing showed on the date it was published. A license application does not guarantee that a business will open, and an application can be withdrawn or denied. A surrendered or canceled license does not always mean a business has closed: surrenders can be temporary, and licenses are often transferred to a new owner or location. We describe each entry using the filing's own status, and label surrenders as "closed or paused."</p>
-    <h2>How we sort filings</h2>
-    <p><b>Duplicates.</b> One business often files several licenses at the same address (for example a restaurant license and a catering permit). We count it once, as one business, and list its license types together.</p>
-    <p><b>Transfers.</b> When a license moves to a new owner at the same address, we report it as "changing hands," not as a closing plus an opening. When the paperwork shows the prior business, we name it.</p>
-    <p><b>Withdrawn or denied applications.</b> We track every filing from day to day. If an application we reported as "opening soon" is later withdrawn, denied or disappears from the state's list, we note it in a later issue rather than leaving the earlier entry unexplained.</p>
-    <p><b>Permits.</b> Dollar figures are the applicant's estimate on the permit, not a contract price. We tag a job &ldquo;Trades open&rdquo; when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records, for example when the permit says that work will be permitted separately. It doesn't confirm the work is unawarded or open for bid. Address, value, square footage, dates, description, permit number and general contractor come straight from the city's record; the tags and the &ldquo;Our read&rdquo; line are our reading of it. When a city doesn't publish a field (San Francisco lists no contractor names; some cities give no value or square footage), we write &ldquo;not provided by the city&rdquo; or show a dash instead of leaving it blank.</p>
-    <p><b>Closings.</b> A surrendered license is labeled "closed or paused," because surrenders can be temporary. Wineries, liquor stores and other retail licenses are kept out of the restaurant counts.</p>
-    <h2 id="csv">The spreadsheet (CSV) that comes with Permit Watch</h2>
-    <p>Every Permit Watch issue comes with a CSV that opens in Excel or Google Sheets, one row per job, in this layout. <a href="/reports/permit-watch/sample.csv">Download a sample</a> (five jobs from a delayed week, same columns as a live issue).</p>
-    <ul>
-      <li><b>Section</b>: which part of the issue the job sits in (Trades still to come, Just filed, Issued this week).</li>
-      <li><b>Address, City</b>: as the city's record gives them.</li>
-      <li><b>Est. value</b>: the dollar value on the permit record; &ldquo;not provided by the city&rdquo; where the city publishes none.</li>
-      <li><b>Sq ft, Use</b>: from the record where published.</li>
-      <li><b>General contractor</b>: the contractor the city lists; San Francisco lists none.</li>
-      <li><b>Trades open (our read)</b>: Yes when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records. It doesn't confirm the work is unawarded or open for bid.</li>
-      <li><b>Just filed (our read)</b>: Yes when the record is an application, not yet an issued permit.</li>
-      <li><b>Kitchen / refrigeration (our read)</b>: Yes when the description names kitchen, restaurant or refrigeration work.</li>
-      <li><b>Date, Date type</b>: the record's date and whether it is the filed or the issued date.</li>
-      <li><b>Permit #, Description</b>: copied from the record, so you can look it up on the city's own site.</li>
-      <li><b>Our read: why it matters</b>: one line that is our reading, not a fact from the record.</li>
-    </ul>
-    <p>Columns marked &ldquo;our read&rdquo; are Picker's Desk's reading of the record. Everything else is copied from the city's record as published.</p>
+  <p class="lede">Picker's Desk reports are compiled from public records published by government agencies. Picker's Desk is independent and is not affiliated with, endorsed by, or acting for any government or agency.</p>
 
-    <h2>We don't verify what was filed</h2>
-    <p>We copy and organize information as the agency published it. We don't independently confirm names, addresses, owners, dates or statuses, and agency records can contain errors or be updated later. Always confirm details with the business or the agency before acting on them.</p>
-    <h2>Information only</h2>
-    <p>Reports are provided as-is for general business information. They are not legal, financial or investment advice, and Picker's Desk is not responsible for decisions made based on them.</p>
-    <h2>Corrections</h2>
-    <p>If an entry is wrong or out of date, email <b>roger@pickersdesk.com</b> with the business name and the license or permit number. We review every request and correct or remove errors promptly.</p>
-  </div>
+  <h2>Where it comes from</h2>
+  <ul class="kc-grid c2"><li class="kc-card "><h3>The Turnover</h3><p>Built from licensing reports published by the California Department of Alcoholic Beverage Control (ABC) and from city business registrations, such as San Francisco's.</p></li><li class="kc-card "><h3>Permit Watch</h3><p>Built from building-permit records published by cities, currently 18 Bay Area cities and counties, from their own open data or public permit search. <a href="/status.html">See every source on Data status</a>.</p></li><li class="kc-card "><h3>Straight from the agency</h3><p>Every record comes directly from the agency that keeps it: the city building department, the state licensing board, the county. We don't copy listings from other websites or buy them from data resellers, so there's no middleman in between to add errors or delays.</p></li><li class="kc-card "><h3>Checked every weekday</h3><p>We check every source each weekday morning and show what changed, including the days when nothing did. <a href="/status.html">See today's data status</a>. How fresh, complete and deep each source is: <a href="/report-card.html">data report card</a>. How 50 US metros compare: <a href="/markets.html">market scorecard</a>.</p></li></ul>
+
+  <h2>We report the filing, not the future</h2>
+  <p class="kc-note" style="margin-top:0">Each entry reflects what a public filing showed on the date it was published.</p>
+  <ul class="kc-grid c2"><li class="kc-card "><h3>Applications</h3><p>A license application does not guarantee that a business will open, and an application can be withdrawn or denied.</p></li><li class="kc-card "><h3>Surrenders</h3><p>A surrendered or canceled license does not always mean a business has closed: surrenders can be temporary, and licenses are often transferred to a new owner or location. We describe each entry using the filing's own status, and label surrenders as &ldquo;closed or paused.&rdquo;</p></li></ul>
+
+  <h2>How we sort filings</h2>
+  <ul class="kc-grid c2"><li class="kc-card "><h3>Duplicates</h3><p>One business often files several licenses at the same address (for example a restaurant license and a catering permit). We count it once, as one business, and list its license types together.</p></li><li class="kc-card "><h3>Transfers</h3><p>When a license moves to a new owner at the same address, we report it as &ldquo;changing hands,&rdquo; not as a closing plus an opening. When the paperwork shows the prior business, we name it.</p></li><li class="kc-card "><h3>Withdrawn or denied</h3><p>We track every filing from day to day. If an application we reported as &ldquo;opening soon&rdquo; is later withdrawn, denied or disappears from the state's list, we note it in a later issue rather than leaving the earlier entry unexplained.</p></li><li class="kc-card "><h3>Closings</h3><p>A surrendered license is labeled &ldquo;closed or paused,&rdquo; because surrenders can be temporary. Wineries, liquor stores and other retail licenses are kept out of the restaurant counts.</p></li><li class="kc-card "><h3>Permits</h3><p>Dollar figures are the applicant's estimate on the permit, not a contract price. We tag a job &ldquo;Trades open&rdquo; when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records, for example when the permit says that work will be permitted separately. It doesn't confirm the work is unawarded or open for bid.</p><p>Address, value, square footage, dates, description, permit number and general contractor come straight from the city's record; the tags and the &ldquo;Our read&rdquo; line are our reading of it. When a city doesn't publish a field (San Francisco lists no contractor names; some cities give no value or square footage), we write &ldquo;not provided by the city&rdquo; or show a dash instead of leaving it blank.</p></li></ul>
+
+  <h2 id="csv">The spreadsheet (CSV) that comes with Permit Watch</h2>
+  <p class="kc-note" style="margin-top:0">Every Permit Watch issue comes with a CSV that opens in Excel or Google Sheets, one row per job, in this layout. <a href="/reports/permit-watch/sample.csv">Download a sample</a> (five jobs from a delayed week, same columns as a live issue). Cards with a gold edge are Picker's Desk's reading of the record. Everything else is copied from the city's record as published.</p>
+  <ul class="kc-grid c3"><li class="kc-card "><h3>Section</h3><p>Which part of the issue the job sits in (Trades still to come, Just filed, Issued this week).</p></li><li class="kc-card "><h3>Address, City</h3><p>As the city's record gives them.</p></li><li class="kc-card "><h3>Est. value</h3><p>The dollar value on the permit record; &ldquo;not provided by the city&rdquo; where the city publishes none.</p></li><li class="kc-card "><h3>Sq ft, Use</h3><p>From the record where published.</p></li><li class="kc-card "><h3>General contractor</h3><p>The contractor the city lists; San Francisco lists none.</p></li><li class="kc-card "><h3>Date, Date type</h3><p>The record's date and whether it is the filed or the issued date.</p></li><li class="kc-card "><h3>Permit #, Description</h3><p>Copied from the record, so you can look it up on the city's own site.</p></li><li class="kc-card ours"><span class="kc-tag">Our read</span><h3>Trades open</h3><p>Yes when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records. It doesn't confirm the work is unawarded or open for bid.</p></li><li class="kc-card ours"><span class="kc-tag">Our read</span><h3>Just filed</h3><p>Yes when the record is an application, not yet an issued permit.</p></li><li class="kc-card ours"><span class="kc-tag">Our read</span><h3>Kitchen / refrigeration</h3><p>Yes when the description names kitchen, restaurant or refrigeration work.</p></li><li class="kc-card ours"><span class="kc-tag">Our read</span><h3>Why it matters</h3><p>One line that is our reading, not a fact from the record.</p></li></ul>
+
+  <h2>Limits and corrections</h2>
+  <ul class="kc-grid c3"><li class="kc-card "><h3>We don't verify what was filed</h3><p>We copy and organize information as the agency published it. We don't independently confirm names, addresses, owners, dates or statuses, and agency records can contain errors or be updated later. Always confirm details with the business or the agency before acting on them.</p></li><li class="kc-card "><h3>Information only</h3><p>Reports are provided as-is for general business information. They are not legal, financial or investment advice, and Picker's Desk is not responsible for decisions made based on them.</p></li><li class="kc-card dark"><h3>Corrections</h3><p>If an entry is wrong or out of date, email <b>roger@pickersdesk.com</b> with the business name and the license or permit number. We review every request and correct or remove errors promptly.</p></li></ul>
   <div class="cta"><a class="btn" href="/#signup">Get The Turnover free</a> <a class="btn ghost" href="/">Back to Picker's Desk</a></div>
 </main>
 <footer><div class="wrap">
