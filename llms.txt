@@ -19,7 +19,8 @@ How it works: every business day we save full copies of the public records we tr
 
 ## Learn
 
-- [How to read a permit record](https://pickersdesk.com/learn/): the stages of a permit (filed, review, issued, inspections, final), where the trades gap sits, and a glossary of the words on a record (MEP deferred, Trades open, GC, TI), each definition citing its source.
+- [Learn](https://pickersdesk.com/learn/): guides grouped by what you want to do. [Buy at a public auction](https://pickersdesk.com/learn/auctions/); [Find and work commercial jobs](https://pickersdesk.com/learn/commercial-work/); [Check a contractor](https://pickersdesk.com/learn/check-a-contractor/); [Read permit records and trends](https://pickersdesk.com/learn/records-and-trends/).
+- [How to read a permit record](https://pickersdesk.com/learn/permit-records/): the stages of a permit (filed, review, issued, inspections, final), where the trades gap sits, and a glossary of the words on a record (MEP deferred, Trades open, GC, TI), each definition citing its source.
 <!-- playbooks:start -->
 - [Playbooks](https://pickersdesk.com/playbooks/): step-by-step roadmaps with a flowchart; every fact links to the official source it came from, and each cited page is re-read on a schedule.
 - [Bid on a California tax-defaulted property](https://pickersdesk.com/playbooks/california-tax-default-property-auction.html): When property taxes go unpaid for years, the county can sell the parcel at auction. Here's how those sales work, what you actually get, and the many ways a parcel can drop out or cost more than the winning bid.
