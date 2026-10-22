@@ -187,6 +187,23 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
     <p><b>Withdrawn or denied applications.</b> We track every filing from day to day. If an application we reported as "opening soon" is later withdrawn, denied or disappears from the state's list, we note it in a later issue rather than leaving the earlier entry unexplained.</p>
     <p><b>Permits.</b> Dollar figures are the applicant's estimate on the permit, not a contract price. We tag a job &ldquo;Trades open&rdquo; when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records, for example when the permit says that work will be permitted separately. It doesn't confirm the work is unawarded or open for bid. Address, value, square footage, dates, description, permit number and general contractor come straight from the city's record; the tags and the &ldquo;Our read&rdquo; line are our reading of it. When a city doesn't publish a field (San Francisco lists no contractor names; some cities give no value or square footage), we write &ldquo;not provided by the city&rdquo; or show a dash instead of leaving it blank.</p>
     <p><b>Closings.</b> A surrendered license is labeled "closed or paused," because surrenders can be temporary. Wineries, liquor stores and other retail licenses are kept out of the restaurant counts.</p>
+    <h2 id="csv">The spreadsheet (CSV) that comes with Permit Watch</h2>
+    <p>Every Permit Watch issue comes with a CSV that opens in Excel or Google Sheets, one row per job, in this layout. <a href="/reports/permit-watch/sample.csv">Download a sample</a> (five jobs from a delayed week, same columns as a live issue).</p>
+    <ul>
+      <li><b>Section</b>: which part of the issue the job sits in (Trades still to come, Just filed, Issued this week).</li>
+      <li><b>Address, City</b>: as the city's record gives them.</li>
+      <li><b>Est. value</b>: the dollar value on the permit record; &ldquo;not provided by the city&rdquo; where the city publishes none.</li>
+      <li><b>Sq ft, Use</b>: from the record where published.</li>
+      <li><b>General contractor</b>: the contractor the city lists; San Francisco lists none.</li>
+      <li><b>Trades open (our read)</b>: Yes when the electrical, mechanical or plumbing work isn't on the permit yet in the city's records. It doesn't confirm the work is unawarded or open for bid.</li>
+      <li><b>Just filed (our read)</b>: Yes when the record is an application, not yet an issued permit.</li>
+      <li><b>Kitchen / refrigeration (our read)</b>: Yes when the description names kitchen, restaurant or refrigeration work.</li>
+      <li><b>Date, Date type</b>: the record's date and whether it is the filed or the issued date.</li>
+      <li><b>Permit #, Description</b>: copied from the record, so you can look it up on the city's own site.</li>
+      <li><b>Our read: why it matters</b>: one line that is our reading, not a fact from the record.</li>
+    </ul>
+    <p>Columns marked &ldquo;our read&rdquo; are Picker's Desk's reading of the record. Everything else is copied from the city's record as published.</p>
+
     <h2>We don't verify what was filed</h2>
     <p>We copy and organize information as the agency published it. We don't independently confirm names, addresses, owners, dates or statuses, and agency records can contain errors or be updated later. Always confirm details with the business or the agency before acting on them.</p>
     <h2>Information only</h2>
