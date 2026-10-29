@@ -105,3 +105,129 @@ footer,.crumbs ol{color:#4a524e}
 @media (max-width:480px){.top .nav a[href$="#sample"]{display:none}}
 @media (min-width:1100px){html[data-ts="1"] .top .nav,html[data-ts="2"] .top .nav{gap:4px 8px}html[data-ts="1"] .top .nav a,html[data-ts="2"] .top .nav a{padding-inline:4px}}
 @media (min-width:1100px) and (max-width:1440px){html[data-ts="2"] .top .wrap{flex-wrap:wrap}html[data-ts="2"] .top .nav{flex-wrap:wrap;order:3;margin:0;flex-basis:100%;gap:0 16px}}
+
+/* ----------------------------------------------------------------------------
+   Fix (Oct 29, 2026): the sign-off inside a dark card was invisible.
+   .sig sets color:var(--ink) and .kc-card.dark sets background:var(--ink), so
+   on /blog/ the line "Roger, Picker's Desk" rendered ink-on-ink (contrast 1.0).
+   Inheriting the card's own foreground fixes it in both themes.
+   ---------------------------------------------------------------------------- */
+.kc-card.dark .sig,.kc-flow li.win .sig{color:inherit}
+
+/* ============================================================================
+   Dark mode (Oct 29, 2026). Phones default to dark at night and the paper
+   palette is harsh then. Everything below sits inside the media query, so the
+   light theme is unchanged byte for byte.
+
+   HOW IT WORKS
+   Redefining the tokens on :root re-themes all 75 pages at once: the page
+   surfaces (--paper, --paper-2, --card) go dark, the ink tokens go light, and
+   ordinary text inverts on its own.
+
+   WHY THE ":root" PREFIXES
+   Generated pages put two <style> blocks AFTER the /site.css link, so a plain
+   ".cp-cta" here loses to the page's own ".cp-cta" on equal specificity and
+   source order. Prefixing with :root raises specificity by one id-less step
+   and wins without !important. Keep the prefix on every component rule below.
+
+   THE THREE GROUPS
+   1. Emphasis bands (.signup .box, .cta-box, .prod, the dark cards) are PINNED
+      to a lifted dark surface rather than inverting, because their children
+      hardcode light colours (#E4DCCB, #EDE6D6, #F2C46B, #fff) that only read
+      on dark. Pinning keeps those children correct with no generator changes.
+   2. Small badges and bars (step numbers, rank circles, selected tabs) DO
+      invert to a cream chip with dark text so they still pop on a dark card.
+   3. Status pills and callouts hardcode a light tint; each gets a dark tint
+      and a light foreground.
+
+   Every foreground/background pair below was contrast-checked; the lowest text
+   pair is 6.2:1 (AA needs 4.5:1). Re-check if these values are ever edited.
+   ============================================================================ */
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --paper:#141E1B; --paper-2:#1A2622; --card:#1E2B27;
+    --ink:#EDE6D7; --ink-2:#D8CFBC;
+    --text:#DED8CB; --muted:#A4ADA6; --line:#35443E;
+    --brass:#D9A748; --brass-ink:#E8BE6A;
+    --open:#7DC79A; --open-bg:#1D3A2B;
+    --hands:#E0B457; --hands-bg:#3A2F16;
+    --close:#F0A091; --close-bg:#42211B;
+    /* emphasis surface, lifted above --card so pinned bands still read as cards */
+    --emph:#2A3F38; --emph-ink:#F2EDE1;
+    /* status tints: dark background + light foreground, replacing light stickers */
+    --tint-blue-bg:#24405A;   --tint-blue:#C3DAEF;
+    --tint-green-bg:#22422F;  --tint-green:#A6DCBA;
+    --tint-amber-bg:#362D1B;  --tint-amber:#EBCD83;
+    --tint-red-bg:#4A2720;    --tint-red:#F2AA9B;
+    --tint-grey-bg:#2B3531;   --tint-grey:#C7CEC9;
+  }
+
+  /* 1. Emphasis bands stay dark (their children hardcode light text) */
+  :root .signup .box,:root .cta-box,:root .cta,:root .cp-cta,:root .tr-cta,
+  :root .prod,:root .proof,:root .dark,:root .t-pw,:root .lead-front,
+  :root .filing-head,:root .kc-card.dark,:root .kc-flow li.win{
+    background:var(--emph);border-color:var(--line)}
+  :root .signup .box,:root .cta-box,:root .tr-cta,:root .filing-head,
+  :root .kc-flow li.win{color:var(--emph-ink)}
+  :root .signup h2,:root .cta-box h2,:root .tr-cta h2,:root .cp-cta h2,
+  :root .cta h2,:root .prod h2,:root .kc-card.dark h3{color:var(--emph-ink)}
+  /* gold buttons inside those bands: their label is var(--ink), now light.
+     :not(.ghost) matters because ".cta" is a dark band on some pages and a
+     plain row of buttons on others, and a ghost button has no gold to sit on. */
+  :root .cp-cta a.btn:not(.ghost),:root .prod a.btn:not(.ghost),
+  :root .cta-box a.btn:not(.ghost),:root .cta a.btn:not(.ghost){color:#1A1A14}
+  /* outlined buttons on any pinned band keep the band's light foreground */
+  :root .signup .box .btn.ghost,:root .cta-box .btn.ghost,:root .cta .btn.ghost,
+  :root .cp-cta .btn.ghost,:root .prod .btn.ghost,:root .tr-cta .btn.ghost,
+  :root .proof .btn.ghost,:root .dark .btn.ghost{
+    background:transparent;color:var(--emph-ink);border-color:var(--emph-ink)}
+  /* the hero's front card floats on the page, not on a card: give it an edge */
+  :root .lead-front,:root .t-pw{box-shadow:0 24px 48px -28px rgba(0,0,0,.8)}
+
+  /* 2. Small badges and bars invert, so they stand out on a dark card */
+  :root .mk-rank,:root .tl .dot,:root .pb-steps h3::before,
+  :root #reports .group span,:root .chips button[aria-pressed=true],
+  :root .kc-num .kc-card::before{background:var(--ink);color:var(--paper)}
+  :root .chips button[aria-pressed=true]{border-color:var(--ink)}
+
+  /* 3a. Neutral chips and panels that hardcode a light background */
+  :root .chips span,:root .kc-card .kc-chips span{
+    background:#2F413A;color:var(--ink)}
+  :root .pb-tools a{background:var(--card);border-color:var(--line)}
+
+  /* 3b. Amber callouts */
+  :root .gap,:root .watch,:root .notice,:root .src .behind{
+    background:var(--tint-amber-bg);border-color:#5A4A22;color:var(--text)}
+  :root .tr-chips li{background:var(--tint-amber-bg);color:var(--tint-amber)}
+
+  /* 3c. Status pills: dark tint, light label */
+  :root .st.open,:root .tag,:root .cp-tag,:root .mk-tag.arch{
+    background:var(--tint-blue-bg);color:var(--tint-blue)}
+  :root .st.done,:root .mk-tag,:root .t-lic,:root .wl-box,:root .tr-chips li.live{
+    background:var(--tint-green-bg);color:var(--tint-green);border-color:#2F5B42}
+  :root .st.exp,:root .mk-tag.warn{
+    background:var(--tint-red-bg);color:var(--tint-red)}
+  :root .st.gone,:root .flow-x{background:var(--tint-grey-bg);color:var(--tint-grey)}
+  :root .auc .when.soon{color:#F0A878}
+
+  /* 3d. Inline SVG diagram boxes */
+  :root .flow-c{fill:var(--tint-amber-bg);stroke:var(--brass)}
+  :root .flow-x{fill:#232F2A;stroke:#8a8f8b}
+  :root .flow-s{fill:#C8CFC9}
+  /* the white tick needs a dark disc; --open is a light green in this theme */
+  :root .plans .yes::before{background:#2F6B4F}
+
+  /* 4. Muted text that the light layer above pins to a light-theme grey */
+  :root footer,:root .crumbs ol{color:var(--muted)}
+
+  /* 5. Table striping: a dark-theme tint, not the light theme's ink wash */
+  @media (min-width:641px){
+    :root main table tbody tr:nth-child(even)>*{background:rgba(255,255,255,.045)}
+    :root main table tbody tr:hover>*{background:rgba(201,147,46,.16)}
+  }
+
+  /* 6. Screenshots are bright documents; an edge stops them floating */
+  :root main img{border-radius:10px}
+  :root .shots img,:root .shot img,:root figure img{border:1px solid var(--line)}
+}
