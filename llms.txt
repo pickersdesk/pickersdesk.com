@@ -17,6 +17,10 @@ How it works: every business day we save full copies of the public records we tr
 - [Sample reports](https://pickersdesk.com/reports/): real sample issues.
 - [Pricing](https://pickersdesk.com/#plans): Free, Turnover Lite ($19/month, planned), Permit Watch ($49/month founding), Pro ($99/month, planned: both reports, several areas, alerts, address history).
 
+## Tools
+
+- [Price book and proposal builder setup](https://pickersdesk.com/tools/): a done-for-you price book and Good, Better, Best proposal builder for small electrical, HVAC and plumbing shops (1 to 20 people). The shop sends its hourly rates, markup, minimum charge and the jobs it quotes most; within 10 business days the workbook is set up in the shop's own Google Drive, with up to 50 price book items. One-time $1,500, no subscription. Makes estimates and proposals only, not contracts. Refund in full before work starts or if not delivered within 10 business days of receiving the rates; revisions included for 30 days after delivery.
+
 ## Learn
 
 - [Learn](https://pickersdesk.com/learn/): guides grouped by what you want to do. [Buy at a public auction](https://pickersdesk.com/learn/auctions/); [Find and work commercial jobs](https://pickersdesk.com/learn/commercial-work/); [Check a contractor](https://pickersdesk.com/learn/check-a-contractor/); [Read permit records and trends](https://pickersdesk.com/learn/records-and-trends/).

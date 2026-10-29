@@ -161,7 +161,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 @media (max-width:900px){.nav{order:3;margin:0;flex-basis:100%;gap:0 20px}}
 </style>
 <style id="nav-fit">@media (max-width:420px){.nav{gap:0 16px}.nav a[href$="#sample"]{display:none}}@media (max-width:360px){.nav{gap:0 12px}.nav a{font-size:1rem}}</style>
-<link rel="stylesheet" href="/site.css?v=e67bdbb7">
+<link rel="stylesheet" href="/site.css?v=3ad266c2">
 <script src="/textsize.js?v=1d6bad35"></script>
 <script data-goatcounter="https://pickersdesk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <meta property="og:type" content="website">
@@ -252,6 +252,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
     </a>
     <nav class="nav" aria-label="Main">
       <a href="/#sample">Sample</a>
+      <a href="/tools/">Tools</a>
       <a href="/permits.html">Permit Watch</a>
       <a href="/auctions.html">Auctions</a>
       <a href="/trends/">Trends</a>
@@ -266,7 +267,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/permits/">Permits by city</a></li><li aria-current="page">Address lookup</li></ol></nav>
 <p class="eyebrow">Free tool</p>
 <h1>What commercial permits are on file at this address?</h1>
-<p class="lede">Type a street address in one of 18 Bay Area cities and counties and see every commercial building permit the city published for it, Apr 25 to Oct 8, 2026.</p>
+<p class="lede">Type a street address in one of 18 Bay Area cities and counties and see every commercial building permit the city published for it, May 1 to Oct 14, 2026.</p>
 <h2>How this works</h2>
 <ul class="kc-grid c3">
 <li class="kc-card"><span class="kc-tag">Permit records only</span><h3>No owner, no parcel</h3><p>You get the permits the city published: what was filed or issued, the value, the stage and the general contractor when the city names one. Nothing about who owns the property.</p></li>
@@ -274,7 +275,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <li class="kc-card"><span class="kc-tag">Commercial</span><h3>No homes</h3><p>Home permits aren't listed. Each city's own permit search covers those; the link is on its <a href="/permits/">city page</a>.</p></li>
 </ul>
 <form class="tool-form" id="f" onsubmit="return false">
-<div><label for="city">City or county</label><select id="city"><option value="san-francisco">San Francisco (1889)</option><option value="san-jose">San José (512)</option><option value="oakland">Oakland (1)</option><option value="fremont">Fremont (40)</option><option value="hayward">Hayward (23)</option><option value="berkeley">Berkeley (3)</option><option value="concord">Concord (4)</option><option value="walnut-creek">Walnut Creek (0)</option><option value="pleasanton">Pleasanton (5)</option><option value="dublin">Dublin (4)</option><option value="san-ramon">San Ramon (6)</option><option value="santa-clara">Santa Clara (18)</option><option value="sunnyvale">Sunnyvale (12)</option><option value="milpitas">Milpitas (42)</option><option value="campbell">Campbell (54)</option><option value="san-mateo">San Mateo (4)</option><option value="menlo-park">Menlo Park (4)</option><option value="marin-county">Marin County (unincorporated) (16)</option></select></div>
+<div><label for="city">City or county</label><select id="city"><option value="san-francisco">San Francisco (1853)</option><option value="san-jose">San José (499)</option><option value="oakland">Oakland (4)</option><option value="fremont">Fremont (48)</option><option value="hayward">Hayward (23)</option><option value="berkeley">Berkeley (3)</option><option value="concord">Concord (4)</option><option value="walnut-creek">Walnut Creek (1)</option><option value="pleasanton">Pleasanton (9)</option><option value="dublin">Dublin (8)</option><option value="san-ramon">San Ramon (8)</option><option value="santa-clara">Santa Clara (22)</option><option value="sunnyvale">Sunnyvale (20)</option><option value="milpitas">Milpitas (47)</option><option value="campbell">Campbell (53)</option><option value="san-mateo">San Mateo (9)</option><option value="menlo-park">Menlo Park (4)</option><option value="marin-county">Marin County (unincorporated) (16)</option></select></div>
 <div><label for="q">Street address (number and street)</label><input type="text" id="q" placeholder="e.g. 88 Spear St" autocomplete="off"></div>
 </form>
 <p class="count" id="count" aria-live="polite">Type an address to look it up.</p>
@@ -285,7 +286,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer nav a{color:var(--ink
 <li class="kc-card"><h3><a href="/reports/address-history/">Address history sample</a></h3><p>Three San Francisco addresses with their commercial permit history. Tell us on the <a href="/#next">waitlist</a> if you'd use full reports.</p></li>
 <li class="kc-card"><h3><a href="/search/">Permit search</a></h3><p>The same records, by city and trade instead of by address.</p></li>
 </ul>
-<p class="fine">Matching is on the street number and name as the city wrote it (suites are ignored), so an address the city spells differently can be missed; try fewer words. A permit doesn't guarantee a project goes ahead. Copied from public permit records as published and not independently verified. Built October 22, 2026. <a href="/data.html">How we sort records</a>.</p>
+<p class="fine">Matching is on the street number and name as the city wrote it (suites are ignored), so an address the city spells differently can be missed; try fewer words. A permit doesn't guarantee a project goes ahead. Copied from public permit records as published and not independently verified. Built October 28, 2026. <a href="/data.html">How we sort records</a>.</p>
 </main>
 <script>
 var $=function(s){return document.querySelector(s)};
@@ -322,7 +323,7 @@ function render(){var n=norm(q.value);var name=sel.options[sel.selectedIndex].te
   var num=n.split(' ')[0];var f=rows.filter(function(r){return r.n.indexOf(n)===0||(/^\d/.test(num)&&r.n.split(' ')[0]===num&&r.n.indexOf(n.split(' ').slice(1).join(' '))>=0)});
   f.sort(function(a,b){return a.w<b.w?-1:1});
   $('#out').innerHTML=f.map(card).join('');
-  $('#count').textContent=f.length?f.length+' commercial permit'+(f.length===1?'':'s')+' on file at "'+q.value.trim()+'" in '+name+', Apr 25 to Oct 8, 2026':'No commercial permits on file for "'+q.value.trim()+'" in '+name+' in that window. Try just the number and street, or check the city\'s own permit search.';
+  $('#count').textContent=f.length?f.length+' commercial permit'+(f.length===1?'':'s')+' on file at "'+q.value.trim()+'" in '+name+', May 1 to Oct 14, 2026':'No commercial permits on file for "'+q.value.trim()+'" in '+name+' in that window. Try just the number and street, or check the city\'s own permit search.';
   var u=new URLSearchParams();u.set('city',sel.value);u.set('q',q.value.trim());history.replaceState(null,'','?'+u.toString());}
 function go(){load(sel.value,function(j){rows=j;render()})}
 sel.addEventListener('change',go);q.addEventListener('input',render);
@@ -330,7 +331,7 @@ go();
 </script>
 <footer><div class="wrap">
   <p><b>Picker's Desk</b> · Early sales leads from public records<br><a href="mailto:roger@pickersdesk.com">roger@pickersdesk.com</a></p>
-  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a><a href="/learn/">Learn</a><a href="/playbooks/">Playbooks</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/tools/">Tools</a><a href="/data.html">Our data</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/reports/">Reports</a><a href="/permits/">Permits by city</a><a href="/trends/">Trends</a><a href="/learn/">Learn</a><a href="/playbooks/">Playbooks</a><a href="/auctions.html">Auctions</a><a href="/status.html">Data status</a></nav>
   <p class="fine">© 2026 Picker's Desk</p>
 </div></footer>
 </body>

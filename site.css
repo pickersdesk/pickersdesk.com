@@ -100,3 +100,8 @@ footer,.crumbs ol{color:#4a524e}
 .kc-note{margin:14px 0 0;color:var(--muted,#59615b);max-width:70ch}
 @media(min-width:640px){.kc-grid.c2,.kc-grid.c3,.kc-grid.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.kc-flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:1000px){.kc-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.kc-grid.c4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Nav fit with Tools added (Oct 29, 2026): on phones hide "Sample" (it is a section of the home page) so the main nav stays at two rows. The same rule in each page's #nav-fit lost to the tap-target rule above. */
+@media (max-width:480px){.top .nav a[href$="#sample"]{display:none}}
+@media (min-width:1100px){html[data-ts="1"] .top .nav,html[data-ts="2"] .top .nav{gap:4px 8px}html[data-ts="1"] .top .nav a,html[data-ts="2"] .top .nav a{padding-inline:4px}}
+@media (min-width:1100px) and (max-width:1440px){html[data-ts="2"] .top .wrap{flex-wrap:wrap}html[data-ts="2"] .top .nav{flex-wrap:wrap;order:3;margin:0;flex-basis:100%;gap:0 16px}}
